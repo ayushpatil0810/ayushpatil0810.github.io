@@ -1,302 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="-vCXCGeqTPeAv9v4GeJiiwqOt346LW6nl3otstEwE0Q" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ayush Patil's Portfolio">
-    <meta name="keywords" content="ayushpatil0810, ayush patil, Ayush Patil, python, dy patil, dit pimpri, dit, dy patil institute of technology pimpri, py patil institute of technology pimpri pune, py patil institute of technology pune">
-    <meta name="author" content="Ayush Patil">
-
-    <meta itemprop="name" content="Ayush Patil's Portfolio" />
-    <meta itemprop="description" content="Ayush Patil's Portfolio" />
-    <meta itemprop="image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
-    
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://ayushpatil0810.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ayush Patil's Portfolio" />
-    <meta property="og:description" content="Ayush Patil's Portfolio" />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ayush Patil's Portfolio" />
-    <meta name="twitter:description" content="Ayush Patil's Portfolio" />
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
-
-    
-    <title>Ayush Patil's Portfolio</title>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --gradient-1: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            --gradient-2: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Verdana', sans-serif;
-        }
-        body {
-            background: linear-gradient(135deg, #2C3E50, #34495E, #7F8C8D, #BDC3C7, #ECF0F1);
-            color: #ECF0F1;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        header {
-            background: rgba(30, 30, 30, 0.6);
-            backdrop-filter: blur(10px);
-            color: #BDC3C7;
-            padding: 20px;
-            text-align: center;
+        body {
+            background: var(--gradient-1);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
             width: 100%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 1s ease-in-out;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        header h1 {
-            margin-left: 20px;
-            color: #BDC3C7;
-        }
-
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            gap: 15px;
-            margin-right: 20px;
-        }
-
-        nav a {
+        .nav-links a {
+            color: #333;
             text-decoration: none;
-            color: #BDC3C7;
-            font-size: 18px;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: color 0.3s, background 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
-        nav a:hover {
-            color: #7F8C8D;
+        .nav-links a:hover {
+            color: #000;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Section Styles */
+        section {
+            min-height: 100vh;
+            padding: 6rem 2rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-margin-top: 5rem;
         }
 
         .container {
-            max-width: 900px;
-            width: 90%;
-            margin: 20px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        section {
-            margin-bottom: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-            padding: 20px;
+            max-width: 1200px;
             width: 100%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        .profile-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .about-content {
+            text-align: justify;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            max-width: calc(33% - 1.5rem);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Contact Section */
+        .contact-container {
             text-align: center;
         }
 
-        .about img {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            animation: scaleUp 1s ease-in-out;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        @keyframes scaleUp {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
+        .social-links a {
+            color: #333;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .skills-grid {
+                gap: 1rem;
             }
-            to {
-                transform: scale(1);
-                opacity: 1;
+
+            .skill-card {
+                max-width: calc(50% - 1rem);
             }
-        }
-        p {
-            text-align: justify;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            text-align: left;
-            color: white;
-            margin-bottom: 15px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        /* Zoom-In and Zoom-Out on Hover */
-        @keyframes zoomInOut {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1); /* Zoom in */
-            }
-            100% {
-                transform: scale(1); /* Zoom out */
-            }
-        }
-
-        .skill-tile {
-            background: linear-gradient(135deg, #2C3E50, #34495E);
-            color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            font-size: 16px;
-            transition: transform 0.3s;
-            animation: none; /* No animation by default */
-        }
-
-        .skill-tile:hover {
-            animation: zoomInOut 0.6s ease-in-out; /* Apply zoom-in zoom-out animation on hover */
-            transform: translateY(-10px);
-            background: linear-gradient(135deg, #7F8C8D, #BDC3C7);
-        }
-
-        /* Social Media Icons */
-        .social-media a {
-            display: inline-block;
-            margin-right: 15px;
-            color: white; /* White color by default */
-            text-decoration: none;
-            font-size: 32px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-media a:hover {
-            color: #7F8C8D; /* Change color on hover */
-            transform: scale(1.2); /* Zoom In Effect */
         }
 
         @media (max-width: 768px) {
-            nav {
-                flex-wrap: wrap;
-                gap: 10px;
+            .nav-links {
+                flex-direction: column;
+                display: none;
+                gap: 1rem;
+                text-align: center;
             }
-            .container {
-                padding: 10px;
-            }
-            h2 {
-                font-size: 20px;
 
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: #333;
+                position: absolute;
+                right: 1.5rem;
+                top: 1.5rem;
+            }
+
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .skills-grid {
+                gap: 1rem;
+            }
+
+            .skill-card {
+                max-width: calc(50% - 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .skill-card {
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ayush Patil</h1>
-        <nav>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <span class="menu-toggle"><i class="fas fa-bars"></i></span>
+        <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#social">Exploring</a>
+            <a href="#exploring">Exploring</a>
             <a href="#education">Education</a>
-            <a href="#social">Contact</a>
-        </nav>
-    </header>
-    <div class="container">
-        <section id="about" class="about">
-            <img src="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/profile-pic.png" alt="Profile Picture">
-            <h2>About Me : </h2>
-            <p>Hi, I am Ayush Patil 👋, currently studying at Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓. I am eager to learn new programming languages 💻 and technologies 🌐. I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, and building impactful projects 🔧💡. I have a keen interest in computer hardware 🖱️ and am also excited to delve deeper into Machine Learning 🤖 and Data Science 📊. My goal is to gain valuable experience and knowledge in these areas 🌱. I enjoy connecting with new people 🌍 and seeking opportunities that foster personal and professional growth 💼. Outside of academics and tech, I love gaming 🎮!</p>
-        </section>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-        <section id="skills">
-            <h2>Skills : </h2>
-            <div class="skills-grid">
-                <div class="skill-tile">Python</div>
-                <div class="skill-tile">C</div>
-                <div class="skill-tile">Dart</div>
-                <div class="skill-tile">HTML</div>
-                <div class="skill-tile">Virtual Machines</div>
-                <div class="skill-tile">Github</div>
-                <div class="skill-tile">String Manipulation</div>
-
-
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="profile-container">
+                <img src="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/profile-pic.png" alt="Your Name" class="profile-img">
+                <div class="about-content">
+                    <h1>Ayush Patil</h1>
+                    <p>Hi, I am Ayush Patil 👋, currently studying at Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓. I am eager to learn new programming languages 💻 and technologies 🌐. I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, and building impactful projects 🔧💡. I have a keen interest in computer hardware 🖱️ and am also excited to delve deeper into Machine Learning 🤖 and Data Science 📊. My goal is to gain valuable experience and knowledge in these areas 🌱. I enjoy connecting with new people 🌍 and seeking opportunities that foster personal and professional growth 💼. Outside of academics and tech, I love gaming 🎮!</p>
+                </div>
             </div>
-        </section>
-        <section id="skills">
-            <h2>Exploring : </h2>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-tile">Python</div>
-                <div class="skill-tile">Mobile Application Development</div>
-                <div class="skill-tile">Flutter</div>
-                <div class="skill-tile">Data Science</div>
-                <div class="skill-tile">Linux</div>
-
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>Programming Language</p>
+                </div>
+                <div class="skill-card">
+                    <h3>C</h3>
+                    <p>Programming Language</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Dart</h3>
+                    <p>Programming Language</p>
+                </div>
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Virtual Machines</h3>
+                </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Exploring Section -->
+    <section id="exploring">
+        <div class="container">
+            <h2>Exploring</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Flutter</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Science</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Machine Learning</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Linux</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <br>
+            <h3>Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓</h3>
+            <p>Currently pursuing Bachelor of Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
+        </div>
+    </section>
 
-        <section id="education">
-            <h2>Education : </h2>
-            <p><strong>Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓</strong></p>
-            <p>Currently pursuing Bachloer of Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
-        </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out to me on any of these platforms!</p>
+                <div class="social-links">
+                    <a href="https://github.com/ayushpatil0810"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ayushpatil0810"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/ayushpatil0810"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/ayushpatil0810"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:ayushppatil2006@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="social" class="social-media">
-            <h2>Contact : </h2>
-            <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/ayushpatil0810" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://x.com/ayushpatil0810" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com/ayushpatil0810" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="mailto:ayushppatil2006@gmail.com" target="_blank" aria-label="Instagram">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-            </a>
-        </section>
-    </div>
-
-    <!-- JavaScript for smooth scrolling -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        const toggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
