@@ -37,6 +37,7 @@
         :root {
             --gradient-1: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
             --gradient-2: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            --section-spacing: 5rem; /* Increased spacing between sections */
         }
 
         * {
@@ -50,6 +51,10 @@
             background: var(--gradient-1);
             min-height: 100vh;
             line-height: 1.6;
+            padding-top: var(--section-spacing);
+            display: flex;
+            flex-direction: column;
+            gap: var(--section-spacing); /* Added consistent gap between sections */
         }
 
         /* Navbar Styles */
@@ -67,8 +72,9 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 2rem;
         }
 
         .nav-links a {
@@ -85,20 +91,14 @@
             background: rgba(255, 255, 255, 0.2);
         }
 
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
         /* Section Styles */
         section {
-            min-height: 100vh;
-            padding: 6rem 2rem 2rem;
+            min-height: 80vh; /* Reduced from 100vh to create more consistent spacing */
             display: flex;
             align-items: center;
             justify-content: center;
-            scroll-margin-top: 5rem;
+            padding: 2rem;
+            scroll-margin-top: var(--section-spacing); /* Added for smooth scrolling */
         }
 
         .container {
@@ -186,6 +186,10 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
+            :root {
+                --section-spacing: 4rem; /* Slightly reduced spacing for medium screens */
+            }
+
             .skills-grid {
                 gap: 1rem;
             }
@@ -196,23 +200,13 @@
         }
 
         @media (max-width: 768px) {
+            :root {
+                --section-spacing: 3rem; /* Further reduced spacing for small screens */
+            }
+
             .nav-links {
-                flex-direction: column;
-                display: none;
+                justify-content: center;
                 gap: 1rem;
-                text-align: center;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-                color: #333;
-                position: absolute;
-                right: 1.5rem;
-                top: 1.5rem;
             }
 
             .profile-container {
@@ -235,6 +229,14 @@
         }
 
         @media (max-width: 480px) {
+            :root {
+                --section-spacing: 2rem; /* Minimum spacing for very small screens */
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+            }
+
             .skills-grid {
                 flex-direction: column;
                 gap: 1rem;
@@ -249,7 +251,6 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <span class="menu-toggle"><i class="fas fa-bars"></i></span>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -346,14 +347,5 @@
             </div>
         </div>
     </section>
-
-    <script>
-        const toggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
