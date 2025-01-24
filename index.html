@@ -26,327 +26,158 @@
     <meta name="twitter:title" content="Ayush Patil's Portfolio" />
     <meta name="twitter:description" content="Ayush Patil's Portfolio" />
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
-    
-    <title>Ayush Patil's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Ayush Patil - Portfolio</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Latest Font Awesome version -->
     <link rel="icon" type="image/x-icon" href="user-regular.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Glassmorphism effect */
+        .glass {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+        }
         html {
             scroll-behavior: smooth;
         }
-
-        :root {
-            --gradient-1: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-            --gradient-2: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-            --section-spacing: 5rem; /* Increased spacing between sections */
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: var(--gradient-1);
-            min-height: 100vh;
-            line-height: 1.6;
-            padding-top: var(--section-spacing);
-            display: flex;
-            flex-direction: column;
-            gap: var(--section-spacing); /* Added consistent gap between sections */
-        }
-
-        /* Navbar Styles */
-        .navbar {
+        /* Hidden by default */
+        #go-to-top {
             position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem;
-            z-index: 1000;
-        }
-
-        .nav-links {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s, background 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-        .nav-links a:hover {
-            color: #000;
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Section Styles */
-        section {
-            min-height: 80vh; /* Reduced from 100vh to create more consistent spacing */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            scroll-margin-top: var(--section-spacing); /* Added for smooth scrolling */
-        }
-
-        .container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-
-        /* About Section */
-        .profile-container {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .profile-img {
-            width: 250px;
-            height: 250px;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            padding: 10px 15px;
             border-radius: 50%;
-            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-
-        .about-content {
-            text-align: justify;
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .about-content h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .skill-card {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1;
-            min-width: 150px;
-            max-width: calc(33% - 1.5rem);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Contact Section */
-        .contact-container {
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: #333;
-            font-size: 2rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #000;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            :root {
-                --section-spacing: 4rem; /* Slightly reduced spacing for medium screens */
-            }
-
-            .skills-grid {
-                gap: 1rem;
-            }
-
-            .skill-card {
-                max-width: calc(50% - 1rem);
-            }
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --section-spacing: 3rem; /* Further reduced spacing for small screens */
-            }
-
-            .nav-links {
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            .profile-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-img {
-                width: 200px;
-                height: 200px;
-            }
-
-            .skills-grid {
-                gap: 1rem;
-            }
-
-            .skill-card {
-                max-width: calc(50% - 1rem);
-            }
-        }
-
-        @media (max-width: 480px) {
-            :root {
-                --section-spacing: 2rem; /* Minimum spacing for very small screens */
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-            }
-
-            .skills-grid {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .skill-card {
-                max-width: 100%;
-            }
+        #go-to-top:hover {
+            background-color: rgba(255, 255, 255, 1);
         }
     </style>
 </head>
-<body>
+<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white font-sans">
+
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#exploring">Exploring</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <nav class="fixed top-0 w-full glass p-4 flex justify-between items-center z-50">
+        <h1 class="text-2xl font-bold tracking-wide">Ayush Patil</h1>
+        <ul class="flex space-x-8 text-lg">
+            <li><a href="#about" class="hover:text-gray-300 transition" aria-label="About Section">About</a></li>
+            <li><a href="#skills" class="hover:text-gray-300 transition" aria-label="Skills Section">Skills</a></li>
+            <li><a href="#exploring" class="hover:text-gray-300 transition" aria-label="Exploring Section">Exploring</a></li>
+            <li><a href="#education" class="hover:text-gray-300 transition" aria-label="Education Section">Education</a></li>
+            <li><a href="#contact" class="hover:text-gray-300 transition" aria-label="Contact Section">Contact</a></li>
+        </ul>
     </nav>
 
+    <!-- Header Section -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+        <div class="w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="https://avatars.githubusercontent.com/u/94798136?v=4" alt="Ayush Patil" class="w-full h-full object-cover">
+        </div>
+        <h1 class="text-5xl font-extrabold mt-6">Hi, I'm Ayush Patil</h1>
+        <p class="text-2xl mt-4 max-w-xl">A student of AI & DS also exploring the world of Cross Platform Mobile App Development</p>
+        <a href="#contact" class="mt-6 inline-block bg-white text-black px-6 py-3 rounded-full shadow-lg hover:bg-gray-300 transition" aria-label="Get in Touch">Get in Touch <i class="fa-solid fa-arrow-down"></i></a>
+    </header>
+
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="profile-container">
-                <img src="profile-pic.png" alt="Ayush Patil" class="profile-img">
-                <div class="about-content">
-                    <h1>Ayush Patil</h1>
-                    <p>Hi, I am Ayush Patil 👋, currently studying at Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓. I am eager to learn new programming languages 💻 and technologies 🌐. I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, and building impactful projects 🔧💡. I have a keen interest in computer hardware 🖱️ and am also excited to delve deeper into Machine Learning 🤖 and Data Science 📊. My goal is to gain valuable experience and knowledge in these areas 🌱. I enjoy connecting with new people 🌍 and seeking opportunities that foster personal and professional growth 💼. Outside of academics and tech, I love gaming 🎮!</p>
-                </div>
-            </div>
+    <section id="about" class="py-20 px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10">
+            <h2 class="text-4xl font-bold mb-6">About Me</h2>
+            <p class="text-lg leading-relaxed">Hi, I am Ayush Patil 👋, 
+                I am eager to learn new programming languages 💻 and technologies 🌐. 
+                I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, and building impactful projects 🔧💡. 
+                I have a keen interest in computer hardware 🖱️ and am also excited to delve deeper into Machine Learning 🤖 and Data Science 📊. 
+                My goal is to gain valuable experience and knowledge in these areas 🌱. 
+                I enjoy connecting with new people 🌍 and seeking opportunities that foster personal and 
+                professional growth 💼. Outside of academics and tech, I love gaming 🎮!</p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Python</h3>
-                    <p>Programming Language</p>
-                </div>
-                <div class="skill-card">
-                    <h3>C</h3>
-                    <p>Programming Language</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Dart</h3>
-                    <p>Programming Language</p>
-                </div>
-                <div class="skill-card">
-                    <h3>HTML</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Virtual Machines</h3>
-                </div>
+    <section id="skills" class="py-20 px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10">
+            <h2 class="text-4xl font-bold mb-6">Skills</h2>
+            <div class="flex flex-wrap justify-center gap-6 mt-6">
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md">C Programming</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-dart-lang"></i>Dart</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-solid fa-box"></i> Object Oriented Programming</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-html5"></i> HTML</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-css3"></i> CSS</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md">Virtual Machine</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-solid fa-bug"></i> Debugging</span>
             </div>
         </div>
     </section>
 
     <!-- Exploring Section -->
-    <section id="exploring">
-        <div class="container">
-            <h2>Exploring</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Flutter</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Data Science</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Machine Learning</h3>
-                </div>
-                <div class="skill-card">
-                    <h3>Linux</h3>
-                </div>
-            </div>
+    <section id="exploring" class="py-20 px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10">
+            <h2 class="text-4xl font-bold mb-6">What I'm Exploring</h2>
+            <p class="text-lg leading-relaxed">I am diving deep into the world of Flutter to create amazing cross-platform apps while also refining my knowledge of Python.</p>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <br>
-            <h3>Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓</h3>
-            <p>Currently pursuing Bachelor of Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
+    <section id="education" class="py-20 px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10">
+            <h2 class="text-4xl font-bold mb-6">Education</h2>
+            <h2 class="text-3xl font-semibold mb-6">Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓</h2>
+            <p class="text-lg leading-relaxed">Currently pursuing Bachelor of Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="contact-container">
-                <h2>Get In Touch</h2>
-                <p>Feel free to reach out to me on any of these platforms!</p>
-                <div class="social-links">
-                    <a href="https://github.com/ayushpatil0810"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/ayushpatil0810"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/ayushpatil0810"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com/ayushpatil0810"><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:ayushppatil2006@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
+    <section id="contact" class="py-20 px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10">
+            <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+            <p class="text-lg leading-relaxed mb-8">Feel free to reach out to me on any of these platforms !</p>
+            <div class="flex justify-center space-x-8">
+                <a href="mailto:ayushppatil2006@gmail.com" class="text-3xl hover:text-gray-300 transition" aria-label="GitHub Profile"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="Instagram Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
+
+    <footer class="text-center py-2 text-sm text-white">
+        <div class="glass p-4 rounded-lg">
+            <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Go to Top Button -->
+    <button id="go-to-top" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("go-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+
+        // When the user clicks the button, scroll to the top of the document
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
 </body>
 </html>
