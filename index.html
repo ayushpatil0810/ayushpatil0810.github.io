@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ayush Patil's Portfolio">
-    <meta name="keywords" content="ayushpatil0810, ayush patil, Ayush Patil, python, dy patil, dit pimpri, dit, dy patil institute of technology pimpri, py patil institute of technology pimpri pune, py patil institute of technology pune">
+    <meta name="keywords"
+        content="ayushpatil0810, ayush patil, Ayush Patil, python, dy patil, dit pimpri, dit, dy patil institute of technology pimpri, dy patil institute of technology pimpri pune, py patil institute of technology pune">
     <meta name="author" content="Ayush Patil">
 
     <meta itemprop="name" content="Ayush Patil's Portfolio" />
     <meta itemprop="description" content="Ayush Patil's Portfolio" />
     <meta itemprop="image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
-    
+
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://ayushpatil0810.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Ayush Patil's Portfolio" />
     <meta property="og:description" content="Ayush Patil's Portfolio" />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
-    
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ayush Patil's Portfolio" />
@@ -31,7 +33,13 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Latest Font Awesome version -->
     <link rel="icon" type="image/x-icon" href="user-regular.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         /* Glassmorphism effect */
         .glass {
@@ -41,9 +49,11 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 16px;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         /* Hidden by default */
         #go-to-top {
             position: fixed;
@@ -58,100 +68,447 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
         #go-to-top:hover {
             background-color: rgba(255, 255, 255, 1);
         }
+
+        .hidden {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-transition {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        body {
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        /* Navbar animations */
+        .nav-bg {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-item {
+            opacity: 0;
+            animation: fadeInDown 0.5s ease forwards;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section spacing */
+        section {
+            padding-top: 8rem;
+            /* Increased from 5rem (py-20) */
+            padding-bottom: 8rem;
+            margin-bottom: 2rem;
+            /* Additional margin between sections */
+        }
+
+        /* Mobile menu styles */
+        .mobile-menu {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 50;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            padding: 0.5rem;
+            opacity: 1;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(0);
+            visibility: visible;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-menu.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-100%);
+        }
+
+        .mobile-menu:hover {
+            transform: scale(1.1);
+        }
+
+        .mobile-menu i {
+            font-weight: bold;
+        }
+
+        /* Menu icon animation */
+        .mobile-menu.active i {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+
+        /* Slide animation for mobile nav */
+        .mobile-nav {
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+
+        /* Menu items animation */
+        .mobile-nav a {
+            display: block;
+            transform: translateX(50px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav.active a {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .mobile-nav a:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .mobile-nav a:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .mobile-nav a:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .mobile-nav a:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .mobile-nav a:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 48;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: 49;
+            transition: right 0.3s ease;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            #navbar {
+                display: none !important;
+                /* Force hide desktop nav on mobile */
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .mobile-nav {
+                display: block;
+            }
+
+            /* Adjust section paddings for mobile */
+            section {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+
+            /* Make header text responsive */
+            .text-5xl {
+                font-size: 2.5rem;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+
+            .mobile-menu,
+            .mobile-nav,
+            .menu-overlay {
+                display: none !important;
+                /* Force hide mobile elements on desktop */
+            }
+        }
+
+        /* New hiding animation for mobile menu */
+        .mobile-menu.slide-out {
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        }
+
+        /* Update go-to-top button styles */
+        #go-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            padding: 10px 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #go-to-top.slide-out {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(100%);
+        }
+
+        #go-to-top:hover {
+            background-color: rgba(255, 255, 255, 1);
+            transform: translateY(-3px);
+        }
     </style>
 </head>
-<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white font-sans">
+
+<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white">
+    <!-- Add mobile menu button -->
+    <button class="mobile-menu glass" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Add menu overlay -->
+    <div class="menu-overlay"></div>
+
+    <!-- Add mobile navigation -->
+    <nav class="mobile-nav">
+        <div class="p-8">
+            <ul class="space-y-6 text-center">
+                <li><a href="#about" class="text-white text-xl font-bold hover:text-gray-300 transition-all">About</a>
+                </li>
+                <li><a href="#skills" class="text-white text-xl font-bold hover:text-gray-300 transition-all">Skills</a>
+                </li>
+                <li><a href="#exploring"
+                        class="text-white text-xl font-bold hover:text-gray-300 transition-all">Exploring</a></li>
+                <li><a href="#education"
+                        class="text-white text-xl font-bold hover:text-gray-300 transition-all">Education</a></li>
+                <li><a href="#contact"
+                        class="text-white text-xl font-bold hover:text-gray-300 transition-all">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full glass p-4 flex justify-between items-center z-50">
-        <h1 class="text-2xl font-bold tracking-wide">Ayush Patil</h1>
-        <ul class="flex space-x-8 text-lg">
-            <li><a href="#about" class="hover:text-gray-300 transition" aria-label="About Section">About</a></li>
-            <li><a href="#skills" class="hover:text-gray-300 transition" aria-label="Skills Section">Skills</a></li>
-            <li><a href="#exploring" class="hover:text-gray-300 transition" aria-label="Exploring Section">Exploring</a></li>
-            <li><a href="#education" class="hover:text-gray-300 transition" aria-label="Education Section">Education</a></li>
-            <li><a href="#contact" class="hover:text-gray-300 transition" aria-label="Contact Section">Contact</a></li>
+    <nav id="navbar" class="desktop-nav fixed top-0 w-full p-4 flex justify-center items-center z-50 navbar-transition">
+        <ul class="flex space-x-12 text-lg">
+            <li><a href="#about" class="nav-item hover:text-gray-300 transition hover-scale"
+                    style="animation-delay: 100ms" aria-label="About Section">About</a></li>
+            <li><a href="#skills" class="nav-item hover:text-gray-300 transition hover-scale"
+                    style="animation-delay: 200ms" aria-label="Skills Section">Skills</a></li>
+            <li><a href="#exploring" class="nav-item hover:text-gray-300 transition hover-scale"
+                    style="animation-delay: 300ms" aria-label="Exploring Section">Exploring</a></li>
+            <li><a href="#education" class="nav-item hover:text-gray-300 transition hover-scale"
+                    style="animation-delay: 400ms" aria-label="Education Section">Education</a></li>
+            <li><a href="#contact" class="nav-item hover:text-gray-300 transition hover-scale"
+                    style="animation-delay: 500ms" aria-label="Contact Section">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Header Section -->
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-        <div class="w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-lg">
-            <img src="https://avatars.githubusercontent.com/u/94798136?v=4" alt="Ayush Patil" class="w-full h-full object-cover">
+        <div class="w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-lg animate-float"
+            data-aos="zoom-in">
+            <img src="https://avatars.githubusercontent.com/u/94798136?v=4" alt="Ayush Patil"
+                class="w-full h-full object-cover">
         </div>
-        <h1 class="text-5xl font-extrabold mt-6">Hi, I'm Ayush Patil</h1>
-        <p class="text-2xl mt-4 max-w-xl">A student of AI & DS also exploring the world of Cross Platform Mobile App Development</p>
-        <a href="#contact" class="mt-6 inline-block bg-white text-black px-6 py-3 rounded-full shadow-lg hover:bg-gray-300 transition" aria-label="Get in Touch">Get in Touch <i class="fa-solid fa-arrow-down"></i></a>
+        <h1 class="text-5xl font-extrabold mt-6" data-aos="fade-up">Hi, I'm Ayush Patil</h1>
+        <p class="text-2xl mt-4 max-w-xl" data-aos="fade-up" data-aos-delay="200">A student of AI & DS also exploring
+            the world of Cross Platform Mobile App Development</p>
+        <a href="#contact"
+            class="mt-6 inline-block bg-white text-black px-6 py-3 rounded-full shadow-lg hover:bg-gray-300 transition hover-scale"
+            data-aos="fade-up" data-aos-delay="400" aria-label="Get in Touch">Get in Touch <i
+                class="fa-solid fa-arrow-down"></i></a>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10">
+    <section id="about" class="px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
             <h2 class="text-4xl font-bold mb-6">About Me</h2>
-            <p class="text-lg leading-relaxed">Hi, I am Ayush Patil 👋, 
-                I am eager to learn new programming languages 💻 and technologies 🌐. 
-                I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, and building impactful projects 🔧💡. 
-                I have a keen interest in computer hardware 🖱️ and am also excited to delve deeper into Machine Learning 🤖 and Data Science 📊. 
-                My goal is to gain valuable experience and knowledge in these areas 🌱. 
-                I enjoy connecting with new people 🌍 and seeking opportunities that foster personal and 
+            <p class="text-lg leading-relaxed">Hi, I am Ayush Patil 👋,
+                I am eager to learn new programming languages 💻 and technologies 🌐.
+                I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, and
+                building impactful projects 🔧💡.
+                I have a keen interest in computer hardware 🖱️ and am also excited to delve deeper into Machine
+                Learning 🤖 and Data Science 📊.
+                My goal is to gain valuable experience and knowledge in these areas 🌱.
+                I enjoy connecting with new people 🌍 and seeking opportunities that foster personal and
                 professional growth 💼. Outside of academics and tech, I love gaming 🎮!</p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10">
+    <section id="skills" class="px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
             <h2 class="text-4xl font-bold mb-6">Skills</h2>
             <div class="flex flex-wrap justify-center gap-6 mt-6">
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-python"></i> Python</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md">C Programming</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-dart-lang"></i>Dart</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-solid fa-box"></i> Object Oriented Programming</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-html5"></i> HTML</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-brands fa-css3"></i> CSS</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md">Virtual Machine</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md"><i class="fa-solid fa-bug"></i> Debugging</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="100"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="200">C Programming</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="300"><i class="fa-brands fa-dart-lang"></i>Dart</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="400"><i class="fa-solid fa-box"></i> Object Oriented Programming</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="500"><i class="fa-brands fa-html5"></i> HTML</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="600"><i class="fa-brands fa-css3"></i> CSS</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="700">Virtual Machine</span>
+                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
+                    data-aos-delay="800"><i class="fa-solid fa-bug"></i> Debugging</span>
             </div>
         </div>
     </section>
 
     <!-- Exploring Section -->
-    <section id="exploring" class="py-20 px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10">
-            <h2 class="text-4xl font-bold mb-6">What I'm Exploring</h2>
-            <p class="text-lg leading-relaxed">I am diving deep into the world of Flutter to create amazing cross-platform apps while also refining my knowledge of Python.</p>
+    <section id="exploring" class="px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">What I'm Exploring</h2>
+            <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">I am diving deep into the world
+                of Flutter to create amazing cross-platform apps while also refining my knowledge of Python.</p>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-20 px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10">
-            <h2 class="text-4xl font-bold mb-6">Education</h2>
-            <h2 class="text-3xl font-semibold mb-6">Dr. D. Y. Patil Institute of Technology, Pimpri, Pune 🎓</h2>
-            <p class="text-lg leading-relaxed">Currently pursuing Bachelor of Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
+    <section id="education" class="px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Education</h2>
+            <h2 class="text-3xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200">Dr. D. Y. Patil Institute of
+                Technology, Pimpri, Pune 🎓</h2>
+            <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="400">Currently pursuing Bachelor of
+                Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10">
+    <section id="contact" class="px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
             <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
             <p class="text-lg leading-relaxed mb-8">Feel free to reach out to me on any of these platforms !</p>
             <div class="flex justify-center space-x-8">
-                <a href="mailto:ayushppatil2006@gmail.com" class="text-3xl hover:text-gray-300 transition" aria-label="GitHub Profile"><i class="fa-regular fa-envelope"></i></a>
-                <a href="https://github.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="Twitter Profile"><i class="fab fa-twitter"></i></a>
-                <a href="https://linkedin.com/in/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="Instagram Profile"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:ayushppatil2006@gmail.com" class="text-3xl hover:text-gray-300 transition hover-scale"
+                    data-aos="zoom-in" data-aos-delay="100" aria-label="GitHub Profile"><i
+                        class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition hover-scale"
+                    data-aos="zoom-in" data-aos-delay="200" aria-label="GitHub Profile"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://x.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition hover-scale"
+                    data-aos="zoom-in" data-aos-delay="300" aria-label="Twitter Profile"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/in/ayushpatil0810"
+                    class="text-3xl hover:text-gray-300 transition hover-scale" data-aos="zoom-in" data-aos-delay="400"
+                    aria-label="Instagram Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/ayushpatil0810"
+                    class="text-3xl hover:text-gray-300 transition hover-scale" data-aos="zoom-in" data-aos-delay="500"
+                    aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
 
-    <footer class="text-center text-sm text-white">
-        <div class="glass p-4 rounded-lg">
+    <footer class="text-center py-2 text-sm text-white">
+        <div class="p-4 rounded-lg">
             <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
         </div>
     </footer>
@@ -165,11 +522,13 @@
         var mybutton = document.getElementById("go-to-top");
 
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
+        window.onscroll = function () {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
+                mybutton.style.display = 'block';
+                setTimeout(() => mybutton.classList.remove('slide-out'), 10);
             } else {
-                mybutton.style.display = "none";
+                mybutton.classList.add('slide-out');
+                setTimeout(() => mybutton.style.display = 'none', 300); // Match transition duration
             }
         };
 
@@ -177,7 +536,74 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Navbar auto-hide and reappear
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', function () {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Only show navbar and hamburger when completely scrolled to top
+            if (scrollTop === 0) {
+                navbar.classList.remove('hidden');
+                navbar.classList.remove('nav-bg');
+                mobileMenu.classList.remove('slide-out');
+            } else {
+                navbar.classList.add('hidden');
+                navbar.classList.add('nav-bg');
+                mobileMenu.classList.add('slide-out');
+                // Also close mobile menu if it's open
+                mobileNav.classList.remove('active');
+                menuOverlay.style.display = 'none';
+                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        // Initialize AOS with updated settings
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            easing: 'ease-in-out',
+            mirror: true, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
+        });
+
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const menuOverlay = document.querySelector('.menu-overlay');
+
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            menuOverlay.style.display = mobileNav.classList.contains('active') ? 'block' : 'none';
+
+            // Animate the icon
+            mobileMenu.innerHTML = mobileNav.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking overlay
+        menuOverlay.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            menuOverlay.style.display = 'none';
+            mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                menuOverlay.style.display = 'none';
+                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
     </script>
 
 </body>
+
 </html>
