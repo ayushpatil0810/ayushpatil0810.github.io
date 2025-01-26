@@ -41,13 +41,49 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
-        /* Glassmorphism effect */
+        /* Replace glassmorphism with neumorphism */
         .glass {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #e0e5ec;
+            box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+                -9px -9px 16px rgba(255, 255, 255, 0.5);
             border-radius: 16px;
+            color: #4a5568;
+            border: none;
+        }
+
+        /* Add neumorphic pressed effect for buttons */
+        .pressed {
+            box-shadow: inset 9px 9px 16px rgb(163, 177, 198, 0.6),
+                inset -9px -9px 16px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Update mobile menu style */
+        .mobile-menu {
+            background: #e0e5ec;
+            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
+                -5px -5px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .mobile-menu:active {
+            box-shadow: inset 5px 5px 10px rgb(163, 177, 198, 0.6),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Update go-to-top button */
+        #go-to-top {
+            background: #e0e5ec;
+            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
+                -5px -5px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        #go-to-top:hover {
+            box-shadow: 7px 7px 14px rgb(163, 177, 198, 0.6),
+                -7px -7px 14px rgba(255, 255, 255, 0.5);
+        }
+
+        #go-to-top:active {
+            box-shadow: inset 5px 5px 10px rgb(163, 177, 198, 0.6),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
         }
 
         html {
@@ -59,18 +95,11 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            color: black;
             padding: 10px 15px;
             border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             display: none;
             cursor: pointer;
             transition: all 0.3s ease;
-        }
-
-        #go-to-top:hover {
-            background-color: rgba(255, 255, 255, 1);
         }
 
         .hidden {
@@ -337,11 +366,8 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            color: black;
             padding: 10px 15px;
             border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             cursor: pointer;
             opacity: 1;
             visibility: visible;
@@ -356,13 +382,125 @@
         }
 
         #go-to-top:hover {
-            background-color: rgba(255, 255, 255, 1);
             transform: translateY(-3px);
+        }
+
+        /* Add these new styles */
+        .neuro-button {
+            background: #e0e5ec;
+            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
+                -5px -5px 10px rgba(255, 255, 255, 0.5);
+            color: #4a5568;
+            transition: all 0.3s ease;
+        }
+
+        .neuro-button:hover {
+            box-shadow: 7px 7px 14px rgb(163, 177, 198, 0.6),
+                -7px -7px 14px rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .neuro-button:active {
+            box-shadow: inset 5px 5px 10px rgb(163, 177, 198, 0.6),
+                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+            transform: translateY(0);
+        }
+
+        .neuro-tile {
+            background: #e0e5ec;
+            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
+                -5px -5px 10px rgba(255, 255, 255, 0.5);
+            color: #4a5568;
+            transition: all 0.3s ease;
+        }
+
+        .neuro-tile:hover {
+            box-shadow: 7px 7px 14px rgb(163, 177, 198, 0.6),
+                -7px -7px 14px rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .neuro-image {
+            background: #e0e5ec;
+            box-shadow: 12px 12px 24px rgb(163, 177, 198, 0.6),
+                -12px -12px 24px rgba(255, 255, 255, 0.5);
+            padding: 8px;
+            border-radius: 50%;
+            border: none;
+        }
+
+        /* Add these new styles with your other neumorphic styles */
+        .neuro-nav {
+            background: #e0e5ec;
+            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
+                -5px -5px 10px rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            margin: 1rem;
+            padding: 0.75rem 2rem;
+        }
+
+        .nav-item {
+            color: #4a5568;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            box-shadow: 3px 3px 6px rgb(163, 177, 198, 0.6),
+                -3px -3px 6px rgba(255, 255, 255, 0.5);
+            color: #2d3748;
+        }
+
+        .nav-item:active {
+            box-shadow: inset 3px 3px 6px rgb(163, 177, 198, 0.6),
+                inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Add this new social icon style */
+        .nav-icon {
+            color: #4a5568;
+            font-weight: 500;
+            padding: 0.75rem 1.25rem;
+            /* Increased padding */
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            /* Increased from 2.5rem */
+            height: 3rem;
+            /* Increased from 2.5rem */
+            font-size: 1.5rem;
+            /* Increased from 1.25rem */
+        }
+
+        .nav-icon:hover {
+            box-shadow: 3px 3px 6px rgb(163, 177, 198, 0.6),
+                -3px -3px 6px rgba(255, 255, 255, 0.5);
+            color: #2d3748;
+        }
+
+        .nav-icon:active {
+            box-shadow: inset 3px 3px 6px rgb(163, 177, 198, 0.6),
+                inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Update social icons for responsiveness */
+        @media (max-width: 768px) {
+            .nav-icon {
+                padding: 0.5rem 0.75rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
 
-<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white">
+<body class="bg-[#e0e5ec] text-gray-700">
     <!-- Add mobile menu button -->
     <button class="mobile-menu glass" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
@@ -391,34 +529,35 @@
 
     <!-- Navbar -->
     <nav id="navbar" class="desktop-nav fixed top-0 w-full p-4 flex justify-center items-center z-50 navbar-transition">
-        <ul class="flex space-x-12 text-lg">
-            <li><a href="#about" class="nav-item hover:text-gray-300 transition hover-scale"
-                    style="animation-delay: 100ms" aria-label="About Section">About</a></li>
-            <li><a href="#skills" class="nav-item hover:text-gray-300 transition hover-scale"
-                    style="animation-delay: 200ms" aria-label="Skills Section">Skills</a></li>
-            <li><a href="#exploring" class="nav-item hover:text-gray-300 transition hover-scale"
-                    style="animation-delay: 300ms" aria-label="Exploring Section">Exploring</a></li>
-            <li><a href="#education" class="nav-item hover:text-gray-300 transition hover-scale"
-                    style="animation-delay: 400ms" aria-label="Education Section">Education</a></li>
-            <li><a href="#contact" class="nav-item hover:text-gray-300 transition hover-scale"
-                    style="animation-delay: 500ms" aria-label="Contact Section">Contact</a></li>
-        </ul>
+        <div class="neuro-nav">
+            <ul class="flex space-x-12 text-lg">
+                <li><a href="#about" class="nav-item transition hover-scale" style="animation-delay: 100ms"
+                        aria-label="About Section">About</a></li>
+                <li><a href="#skills" class="nav-item transition hover-scale" style="animation-delay: 200ms"
+                        aria-label="Skills Section">Skills</a></li>
+                <li><a href="#exploring" class="nav-item transition hover-scale" style="animation-delay: 300ms"
+                        aria-label="Exploring Section">Exploring</a></li>
+                <li><a href="#education" class="nav-item transition hover-scale" style="animation-delay: 400ms"
+                        aria-label="Education Section">Education</a></li>
+                <li><a href="#contact" class="nav-item transition hover-scale" style="animation-delay: 500ms"
+                        aria-label="Contact Section">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Header Section -->
     <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-        <div class="w-52 h-52 rounded-full overflow-hidden border-4 border-white shadow-lg animate-float"
-            data-aos="zoom-in">
+        <div class="w-52 h-52 neuro-image animate-float" data-aos="zoom-in">
             <img src="https://avatars.githubusercontent.com/u/94798136?v=4" alt="Ayush Patil"
-                class="w-full h-full object-cover">
+                class="w-full h-full object-cover rounded-full">
         </div>
         <h1 class="text-5xl font-extrabold mt-6" data-aos="fade-up">Hi, I'm Ayush Patil</h1>
         <p class="text-2xl mt-4 max-w-xl" data-aos="fade-up" data-aos-delay="200">A student of AI & DS also exploring
             the world of Cross Platform Mobile App Development</p>
-        <a href="#contact"
-            class="mt-6 inline-block bg-white text-black px-6 py-3 rounded-full shadow-lg hover:bg-gray-300 transition hover-scale"
-            data-aos="fade-up" data-aos-delay="400" aria-label="Get in Touch">Get in Touch <i
-                class="fa-solid fa-arrow-down"></i></a>
+        <a href="#contact" class="mt-6 inline-block px-6 py-3 rounded-full neuro-button" data-aos="fade-up"
+            data-aos-delay="400" aria-label="Get in Touch">
+            Get in Touch <i class="fa-solid fa-arrow-down"></i>
+        </a>
     </header>
 
     <!-- About Section -->
@@ -442,29 +581,29 @@
         <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
             <h2 class="text-4xl font-bold mb-6">Skills</h2>
             <div class="flex flex-wrap justify-center gap-6 mt-6">
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="100"><i class="fa-brands fa-python"></i> Python</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="200">C Programming</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="300"><i class="fa-brands fa-dart-lang"></i>Dart</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="400"><i class="fa-solid fa-box"></i> Object Oriented Programming</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="500"><i class="fa-brands fa-html5"></i> HTML</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="600"><i class="fa-brands fa-css3"></i> CSS</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="700">Virtual Machine</span>
-                <span class="px-6 py-3 bg-white text-black rounded-full shadow-md hover-scale" data-aos="zoom-in"
-                    data-aos-delay="800"><i class="fa-solid fa-bug"></i> Debugging</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="100"><i
+                        class="fa-brands fa-python"></i> Python</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="200">C
+                    Programming</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="300"><i
+                        class="fa-brands fa-dart-lang"></i>Dart</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="400"><i
+                        class="fa-solid fa-box"></i> Object Oriented Programming</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="500"><i
+                        class="fa-brands fa-html5"></i> HTML</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="600"><i
+                        class="fa-brands fa-css3"></i> CSS</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="700">Virtual
+                    Machine</span>
+                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="800"><i
+                        class="fa-solid fa-bug"></i> Debugging</span>
             </div>
         </div>
     </section>
 
     <!-- Exploring Section -->
     <section id="exploring" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
+        <div class="glass max-w-5xl mx-auto text-center p-10 overflow-hidden" data-aos="fade-up">
             <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">What I'm Exploring</h2>
             <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">I am diving deep into the world
                 of Flutter to create amazing cross-platform apps while also refining my knowledge of Python.</p>
@@ -473,9 +612,9 @@
 
     <!-- Education Section -->
     <section id="education" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
+        <div class="glass max-w-5xl mx-auto text-center p-10 overflow-hidden" data-aos="fade-up">
             <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Education</h2>
-            <h2 class="text-3xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200">Dr. D. Y. Patil Institute of
+            <h2 class="text-2xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200">Dr. D. Y. Patil Institute of
                 Technology, Pimpri, Pune 🎓</h2>
             <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="400">Currently pursuing Bachelor of
                 Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
@@ -487,27 +626,32 @@
         <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
             <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
             <p class="text-lg leading-relaxed mb-8">Feel free to reach out to me on any of these platforms !</p>
-            <div class="flex justify-center space-x-8">
-                <a href="mailto:ayushppatil2006@gmail.com" class="text-3xl hover:text-gray-300 transition hover-scale"
-                    data-aos="zoom-in" data-aos-delay="100" aria-label="GitHub Profile"><i
-                        class="fa-regular fa-envelope"></i></a>
-                <a href="https://github.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition hover-scale"
-                    data-aos="zoom-in" data-aos-delay="200" aria-label="GitHub Profile"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://x.com/ayushpatil0810" class="text-3xl hover:text-gray-300 transition hover-scale"
-                    data-aos="zoom-in" data-aos-delay="300" aria-label="Twitter Profile"><i
-                        class="fab fa-twitter"></i></a>
-                <a href="https://linkedin.com/in/ayushpatil0810"
-                    class="text-3xl hover:text-gray-300 transition hover-scale" data-aos="zoom-in" data-aos-delay="400"
-                    aria-label="Instagram Profile"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com/ayushpatil0810"
-                    class="text-3xl hover:text-gray-300 transition hover-scale" data-aos="zoom-in" data-aos-delay="500"
-                    aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:ayushppatil2006@gmail.com" class="nav-icon" data-aos="zoom-in" data-aos-delay="100"
+                    aria-label="Email">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <a href="https://github.com/ayushpatil0810" class="nav-icon" data-aos="zoom-in" data-aos-delay="200"
+                    aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/ayushpatil0810" class="nav-icon" data-aos="zoom-in" data-aos-delay="300"
+                    aria-label="Twitter Profile">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/ayushpatil0810" class="nav-icon" data-aos="zoom-in"
+                    data-aos-delay="400" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/ayushpatil0810" class="nav-icon" data-aos="zoom-in" data-aos-delay="500"
+                    aria-label="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <footer class="text-center py-2 text-sm text-white">
+    <footer class="text-center py-2 text-sm text-gray-700">
         <div class="p-4 rounded-lg">
             <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
         </div>
