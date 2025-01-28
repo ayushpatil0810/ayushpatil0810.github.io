@@ -29,7 +29,7 @@
     <meta name="twitter:description" content="Ayush Patil's Portfolio" />
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
 
-    <title>Ayush Patil's Portfolio</title>
+    <title>Ayush Patil - Portfolio</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Latest Font Awesome version -->
     <link rel="icon" type="image/x-icon" href="user-regular.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -497,6 +497,116 @@
                 font-size: 1.25rem;
             }
         }
+
+        /* Certificate Popup Styles */
+        .certificate-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .certificate-popup.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .popup-content {
+            position: relative;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            animation: popupScale 0.3s ease;
+        }
+
+        .popup-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-popup {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: #e0e5ec;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
+                -5px -5px 10px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .close-popup:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes popupScale {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Certificate Section Responsive Styles */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .cert-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Update Certificate Popup Styles */
+        .popup-content {
+            width: 95%;
+            max-width: 800px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            .cert-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0.5rem;
+            }
+
+            .popup-content {
+                width: 98%;
+                padding: 0.5rem;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
 </head>
 
@@ -521,6 +631,7 @@
                         class="text-white text-xl font-bold hover:text-gray-300 transition-all">Exploring</a></li>
                 <li><a href="#education"
                         class="text-white text-xl font-bold hover:text-gray-300 transition-all">Education</a></li>
+                <li><a href="#certifications" class="text-white text-xl font-bold hover:text-gray-300 transition-all">Certifications</a></li>
                 <li><a href="#contact"
                         class="text-white text-xl font-bold hover:text-gray-300 transition-all">Contact</a></li>
             </ul>
@@ -539,7 +650,9 @@
                         aria-label="Exploring Section">Exploring</a></li>
                 <li><a href="#education" class="nav-item transition hover-scale" style="animation-delay: 400ms"
                         aria-label="Education Section">Education</a></li>
-                <li><a href="#contact" class="nav-item transition hover-scale" style="animation-delay: 500ms"
+                <li><a href="#certifications" class="nav-item transition hover-scale" style="animation-delay: 500ms"
+                        aria-label="Certifications Section">Certifications</a></li>
+                <li><a href="#contact" class="nav-item transition hover-scale" style="animation-delay: 600ms"
                         aria-label="Contact Section">Contact</a></li>
             </ul>
         </div>
@@ -620,6 +733,50 @@
                 Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
         </div>
     </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="px-8">
+        <div class="glass max-w-5xl mx-auto text-center p-10 overflow-hidden" data-aos="fade-up">
+            <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Certifications</h2>
+            <div class="cert-grid">
+                <!-- Python Certificate -->
+                <div class="neuro-tile p-6 rounded-lg hover-scale cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Basics of Python</h3>
+                        <p class="text-gray-600 mb-3">Infosys SpringBoard</p>
+                        <p class="text-sm mb-4">Completion Date: January 2025</p>
+                    </div>
+                    <button onclick="showPopup('certificates/basics_of_python_certificate.jpg')" 
+                            class="text-blue-600 hover:text-blue-800 transition-colors">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Certificate
+                    </button>
+                </div>
+
+                <!-- C programming Certificate-->
+                <div class="neuro-tile p-6 rounded-lg hover-scale cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Programming in C</h3>
+                        <p class="text-gray-600 mb-3">Infosys SpringBoard</p>
+                        <p class="text-sm mb-4">Completion Date: January 2025</p>
+                    </div>
+                    <button onclick="showPopup('certificates/programming_in_c_certificate.jpg')" 
+                            class="text-blue-600 hover:text-blue-800 transition-colors">
+                        <i class="fas fa-external-link-alt mr-2"></i>View Certificate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Popup -->
+    <div class="certificate-popup" id="certificatePopup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopup()" aria-label="Close popup">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="popupImage" src="" alt="Certificate" loading="lazy">
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="px-8">
@@ -745,6 +902,35 @@
                 menuOverlay.style.display = 'none';
                 mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
             });
+        });
+
+        // Certificate popup functions
+        function showPopup(imagePath) {
+            const popup = document.getElementById('certificatePopup');
+            const popupImage = document.getElementById('popupImage');
+            popupImage.src = imagePath;
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('certificatePopup');
+            popup.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close popup when clicking outside the image
+        document.getElementById('certificatePopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePopup();
+            }
         });
     </script>
 
