@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="-vCXCGeqTPeAv9v4GeJiiwqOt346LW6nl3otstEwE0Q" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ayush Patil's Portfolio">
     <meta name="keywords"
         content="ayushpatil0810, ayush patil, Ayush Patil, python, dy patil, dit pimpri, dit, dy patil institute of technology pimpri, dy patil institute of technology pimpri pune, py patil institute of technology pune">
@@ -23,938 +21,1181 @@
     <meta property="og:description" content="Ayush Patil's Portfolio" />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
 
+    <!-- LinkedIn Meta Tags -->
+<meta property="og:title" content="Ayush Patil's Portfolio" />
+<meta property="og:description" content="Showcasing Ayush Patil's projects and accomplishments" />
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
+<meta property="og:url" content="https://ayushpatil0810.github.io/" />
+<meta property="og:type" content="website" />
+
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ayush Patil's Portfolio" />
     <meta name="twitter:description" content="Ayush Patil's Portfolio" />
     <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/94798136?v=4" />
+    <title>Portfolio - Ayush Patil</title>
 
-    <title>Ayush Patil - Portfolio</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Latest Font Awesome version -->
-    <link rel="icon" type="image/x-icon" href="user-regular.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="icon" type="image/x-icon" href="./images/logo.png">
     <style>
-        /* Replace glassmorphism with neumorphism */
-        .glass {
-            background: #e0e5ec;
-            box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
-                -9px -9px 16px rgba(255, 255, 255, 0.5);
-            border-radius: 16px;
-            color: #4a5568;
-            border: none;
+        /* Update Claymorphism effect styles */
+        :root {
+            --clay-background: #f6f9fc;
+            --clay-shadow-outset: 
+                0 10px 40px -10px rgba(0, 0, 0, 0.2),
+                0 5px 15px -7px rgba(0, 0, 0, 0.15),
+                0 2px 8px -2px rgba(0, 0, 0, 0.1);
+            --clay-shadow-inset: 
+                inset 2px 2px 7px rgba(255, 255, 255, 0.8),
+                inset -3px -3px 7px rgba(0, 0, 0, 0.2);
+            --clay-shadow-pressed: 
+                inset 3px 3px 7px rgba(0, 0, 0, 0.2),
+                inset -3px -3px 7px rgba(255, 255, 255, 0.5);
+            --clay-radius: 24px;  /* Slightly larger radius */
         }
 
-        /* Add neumorphic pressed effect for buttons */
-        .pressed {
-            box-shadow: inset 9px 9px 16px rgb(163, 177, 198, 0.6),
-                inset -9px -9px 16px rgba(255, 255, 255, 0.5);
+        .clay {
+            background: var(--clay-background);
+            border-radius: var(--clay-radius);
+            box-shadow: var(--clay-shadow-outset);
+            position: relative;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
-        /* Update mobile menu style */
-        .mobile-menu {
-            background: #e0e5ec;
-            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
-                -5px -5px 10px rgba(255, 255, 255, 0.5);
+        .clay:hover {
+            transform: translateY(-7px);  /* Increased lift effect */
+            box-shadow: 
+                0 20px 40px -15px rgba(0, 0, 0, 0.25),
+                0 10px 20px -10px rgba(0, 0, 0, 0.15);
         }
 
-        .mobile-menu:active {
-            box-shadow: inset 5px 5px 10px rgb(163, 177, 198, 0.6),
-                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+        .clay-button {
+            background: var(--clay-background);
+            border-radius: 50px;
+            box-shadow: var(--clay-shadow-outset);
+            position: relative;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
-        /* Update go-to-top button */
-        #go-to-top {
-            background: #e0e5ec;
-            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
-                -5px -5px 10px rgba(255, 255, 255, 0.5);
+        .clay-button:hover {
+            transform: translateY(-5px);  /* Increased lift effect */
+            box-shadow: 
+                0 15px 30px -10px rgba(0, 0, 0, 0.2),
+                0 8px 15px -5px rgba(0, 0, 0, 0.15);
         }
 
-        #go-to-top:hover {
-            box-shadow: 7px 7px 14px rgb(163, 177, 198, 0.6),
-                -7px -7px 14px rgba(255, 255, 255, 0.5);
+        .clay-button:active {
+            box-shadow: var(--clay-shadow-pressed);
+            transform: translateY(0);
         }
 
-        #go-to-top:active {
-            box-shadow: inset 5px 5px 10px rgb(163, 177, 198, 0.6),
-                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+        .clay-pressed {
+            box-shadow: var(--clay-shadow-inset);
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Hidden by default */
-        #go-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 15px;
+        .clay-social {
+            background: var(--clay-background);
             border-radius: 50%;
-            display: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            box-shadow: var(--clay-shadow-outset);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
-        .hidden {
-            transform: translateY(-100%);
-            transition: transform 0.3s ease-in-out;
+        .clay-social:hover {
+            transform: translateY(-5px);  /* Increased lift effect */
+            box-shadow: 
+                0 15px 30px -10px rgba(0, 0, 0, 0.2),
+                0 8px 15px -5px rgba(0, 0, 0, 0.15);
         }
 
-        .navbar-transition {
-            transition: transform 0.3s ease-in-out;
+        .clay-gradient {
+            background: linear-gradient(135deg, #f8f9fa, #ebedef);
+        }
+
+        .clay-card {
+            background: var(--clay-background);
+            border-radius: var(--clay-radius);
+            box-shadow: var(--clay-shadow-outset);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .clay-card:hover {
+            transform: translateY(-7px);  /* Increased lift effect */
+            box-shadow: 
+                0 20px 40px -15px rgba(0, 0, 0, 0.25),
+                0 10px 20px -10px rgba(0, 0, 0, 0.15);
         }
 
         body {
-            font-family: 'Source Code Pro', monospace;
+            background-color: #f0f4f8;
+            background-image: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            min-height: 100vh;
+            background-attachment: fixed;
+            font-family: 'Nunito Sans', sans-serif;
         }
 
-        /* Animation keyframes */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .animate-fadeInUp {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-
-        /* Navbar animations */
-        .nav-bg {
-            backdrop-filter: blur(8px);
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .nav-item {
-            opacity: 0;
-            animation: fadeInDown 0.5s ease forwards;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Section spacing */
-        section {
-            padding-top: 8rem;
-            /* Increased from 5rem (py-20) */
-            padding-bottom: 8rem;
-            margin-bottom: 2rem;
-            /* Additional margin between sections */
-        }
-
-        /* Mobile menu styles */
-        .mobile-menu {
-            position: fixed;
-            top: 1.5rem;
-            right: 1.5rem;
-            z-index: 50;
-            background: transparent;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            padding: 0.5rem;
-            opacity: 1;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            transform: translateY(0);
-            visibility: visible;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .mobile-menu.hidden {
-            opacity: 0;
-            pointer-events: none;
-            transform: translateY(-100%);
-        }
-
-        .mobile-menu:hover {
-            transform: scale(1.1);
-        }
-
-        .mobile-menu i {
-            font-weight: bold;
-        }
-
-        /* Menu icon animation */
-        .mobile-menu.active i {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease;
-        }
-
-        /* Slide animation for mobile nav */
-        .mobile-nav {
-            transform: translateX(100%);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .mobile-nav.active {
-            transform: translateX(0);
-        }
-
-        /* Menu items animation */
-        .mobile-nav a {
-            display: block;
-            transform: translateX(50px);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-nav.active a {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        .mobile-nav a:nth-child(1) {
-            transition-delay: 0.1s;
-        }
-
-        .mobile-nav a:nth-child(2) {
-            transition-delay: 0.2s;
-        }
-
-        .mobile-nav a:nth-child(3) {
-            transition-delay: 0.3s;
-        }
-
-        .mobile-nav a:nth-child(4) {
-            transition-delay: 0.4s;
-        }
-
-        .mobile-nav a:nth-child(5) {
-            transition-delay: 0.5s;
-        }
-
-        .menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
+        /* Mobile menu animation */
+        #mobile-menu {
+            position: absolute;
+            top: 100%;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 48;
-        }
-
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 70%;
-            height: 100vh;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            z-index: 49;
-            transition: right 0.3s ease;
-        }
-
-        .mobile-nav.active {
             right: 0;
-        }
-
-        @media (max-width: 768px) {
-            #navbar {
-                display: none !important;
-                /* Force hide desktop nav on mobile */
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .mobile-nav {
-                display: block;
-            }
-
-            /* Adjust section paddings for mobile */
-            section {
-                padding-top: 4rem;
-                padding-bottom: 4rem;
-            }
-
-            /* Make header text responsive */
-            .text-5xl {
-                font-size: 2.5rem;
-            }
-
-            .text-2xl {
-                font-size: 1.25rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-
-            .mobile-menu,
-            .mobile-nav,
-            .menu-overlay {
-                display: none !important;
-                /* Force hide mobile elements on desktop */
-            }
-        }
-
-        /* New hiding animation for mobile menu */
-        .mobile-menu.slide-out {
-            transform: translateY(-100%);
+            max-height: 0;
+            transition: all 0.3s ease-out;
+            overflow: hidden;
             opacity: 0;
             visibility: hidden;
+            z-index: 50;  /* Add z-index */
+            background-color: transparent;
         }
 
-        @keyframes slideOut {
-            from {
-                transform: translateY(0);
-                opacity: 1;
-            }
-
-            to {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-        }
-
-        /* Update go-to-top button styles */
-        #go-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            border-radius: 50%;
-            cursor: pointer;
+        #mobile-menu.active {
+            max-height: 500px; /* Large enough to contain content */
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        #go-to-top.slide-out {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(100%);
+        /* Add container padding to prevent content shift */
+        .nav-container {
+            position: relative;
+            padding-bottom: 0;
         }
 
-        #go-to-top:hover {
-            transform: translateY(-3px);
+        /* Ensure navbar height remains fixed */
+        .nav-height {
+            height: 72px; /* Adjust this value based on your navbar height */
         }
 
-        /* Add these new styles */
-        .neuro-button {
-            background: #e0e5ec;
-            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
-                -5px -5px 10px rgba(255, 255, 255, 0.5);
-            color: #4a5568;
-            transition: all 0.3s ease;
-        }
-
-        .neuro-button:hover {
-            box-shadow: 7px 7px 14px rgb(163, 177, 198, 0.6),
-                -7px -7px 14px rgba(255, 255, 255, 0.5);
-            transform: translateY(-3px);
-        }
-
-        .neuro-button:active {
-            box-shadow: inset 5px 5px 10px rgb(163, 177, 198, 0.6),
-                inset -5px -5px 10px rgba(255, 255, 255, 0.5);
-            transform: translateY(0);
-        }
-
-        .neuro-tile {
-            background: #e0e5ec;
-            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
-                -5px -5px 10px rgba(255, 255, 255, 0.5);
-            color: #4a5568;
-            transition: all 0.3s ease;
-        }
-
-        .neuro-tile:hover {
-            box-shadow: 7px 7px 14px rgb(163, 177, 198, 0.6),
-                -7px -7px 14px rgba(255, 255, 255, 0.5);
-            transform: translateY(-3px);
-        }
-
-        .neuro-image {
-            background: #e0e5ec;
-            box-shadow: 12px 12px 24px rgb(163, 177, 198, 0.6),
-                -12px -12px 24px rgba(255, 255, 255, 0.5);
-            padding: 8px;
-            border-radius: 50%;
-            border: none;
-        }
-
-        /* Add these new styles with your other neumorphic styles */
-        .neuro-nav {
-            background: #e0e5ec;
-            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
-                -5px -5px 10px rgba(255, 255, 255, 0.5);
-            border-radius: 16px;
-            margin: 1rem;
-            padding: 0.75rem 2rem;
-        }
-
-        .nav-item {
-            color: #4a5568;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-item:hover {
-            box-shadow: 3px 3px 6px rgb(163, 177, 198, 0.6),
-                -3px -3px 6px rgba(255, 255, 255, 0.5);
-            color: #2d3748;
-        }
-
-        .nav-item:active {
-            box-shadow: inset 3px 3px 6px rgb(163, 177, 198, 0.6),
-                inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-        }
-
-        /* Add this new social icon style */
-        .nav-icon {
-            color: #4a5568;
-            font-weight: 500;
-            padding: 0.75rem 1.25rem;
-            /* Increased padding */
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 3rem;
-            /* Increased from 2.5rem */
-            height: 3rem;
-            /* Increased from 2.5rem */
-            font-size: 1.5rem;
-            /* Increased from 1.25rem */
-        }
-
-        .nav-icon:hover {
-            box-shadow: 3px 3px 6px rgb(163, 177, 198, 0.6),
-                -3px -3px 6px rgba(255, 255, 255, 0.5);
-            color: #2d3748;
-        }
-
-        .nav-icon:active {
-            box-shadow: inset 3px 3px 6px rgb(163, 177, 198, 0.6),
-                inset -3px -3px 6px rgba(255, 255, 255, 0.5);
-        }
-
-        /* Update social icons for responsiveness */
-        @media (max-width: 768px) {
-            .nav-icon {
-                padding: 0.5rem 0.75rem;
-                width: 2.5rem;
-                height: 2.5rem;
-                font-size: 1.25rem;
-            }
-        }
-
-        /* Certificate Popup Styles */
-        .certificate-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
+        /* Modal styles */
+        .modal-backdrop {
+            backdrop-filter: blur(8px);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
-        .certificate-popup.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .popup-content {
-            position: relative;
-            margin: auto;
-            max-width: 90%;
-            max-height: 90%;
-            animation: popupScale 0.3s ease;
-        }
-
-        .popup-content img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .close-popup {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: #e0e5ec;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 5px 5px 10px rgb(163, 177, 198, 0.6),
-                -5px -5px 10px rgba(255, 255, 255, 0.5);
+        .modal-content {
+            transform: scale(0.95);
+            opacity: 0;
             transition: all 0.3s ease;
         }
 
-        .close-popup:hover {
-            transform: scale(1.1);
+        .modal-open {
+            overflow: hidden;
         }
 
-        @keyframes popupScale {
-            from {
-                transform: scale(0.7);
-                opacity: 0;
-            }
+        .modal-active .modal-backdrop {
+            opacity: 1;
+        }
 
-            to {
-                transform: scale(1);
-                opacity: 1;
+        .modal-active .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* Add responsive padding for sections */
+        @media (max-width: 768px) {
+            section {
+                padding-top: 6rem;
+            }
+            section:first-of-type {
+                padding-top: 7rem;
             }
         }
 
-        /* Certificate Section Responsive Styles */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+        /* Typewriter cursor effect */
+        .typewriter::after {
+            content: '|';
+            animation: blink 0.7s steps(2) infinite;  /* Changed from 1s to 0.7s and added steps(2) */
+            display: inline-block;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Hide cursor when typing is complete */
+        .typewriter.typing-complete::after {
+            display: none;
+        }
+
+        /* Add these new nav link styles */
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, #6366f1, #a855f7);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
             width: 100%;
-            padding: 1rem;
         }
 
-        .cert-card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .nav-link.active::after {
+            width: 100%;
         }
 
-        /* Update Certificate Popup Styles */
-        .popup-content {
-            width: 95%;
-            max-width: 800px;
-            margin: auto;
-            padding: 1rem;
-        }
-
-        @media (max-width: 640px) {
-            .cert-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 0.5rem;
-            }
-
-            .popup-content {
-                width: 98%;
-                padding: 0.5rem;
-            }
-        }
-
-        @media (min-width: 641px) and (max-width: 1024px) {
-            .cert-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .nav-link:hover {
+            color: #4F46E5;
         }
     </style>
 </head>
 
-<body class="bg-[#e0e5ec] text-gray-700">
-    <!-- Add mobile menu button -->
-    <button class="mobile-menu glass" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-    </button>
+<body class="font-sans text-gray-800 min-h-screen">
+    <!-- Improved Navbar -->
+    <nav class="fixed w-full z-50 bg-gradient-to-r from-white/95 via-indigo-50/95 to-white/95 backdrop-filter backdrop-blur-lg shadow-md"
+        id="navbar">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12 nav-container">
+            <div class="flex justify-between items-center nav-height">
+                <!-- Updated Logo and brand -->
+                <a href="#" class="flex items-center gap-3">
+                    <img src="images/logo.png" width="40" alt="AP Logo" class="rounded-lg clay-social">
+                    <span class="text-xl font-bold text-indigo-600">Ayush Patil</span>
+                </a>
 
-    <!-- Add menu overlay -->
-    <div class="menu-overlay"></div>
+                <!-- Updated Desktop Navigation with icons -->
+                <div class="hidden md:flex items-center">
+                    <div class="flex items-center space-x-4">
+                        <a href="#about" class="nav-link flex items-center gap-2">
+                            <i class="fas fa-user text-indigo-500"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="#skills" class="nav-link flex items-center gap-2">
+                            <i class="fas fa-code text-indigo-500"></i>
+                            <span>Skills</span>
+                        </a>
+                        <a href="#projects" class="nav-link flex items-center gap-2">
+                            <i class="fas fa-laptop-code text-indigo-500"></i>
+                            <span>Projects</span>
+                        </a>
+                        <a href="#contact" class="nav-link flex items-center gap-2">
+                            <i class="fas fa-envelope text-indigo-500"></i>
+                            <span>Contact</span>
+                        </a>
+                        <a href="#blog" class="nav-link flex items-center gap-2">
+                            <i class="fas fa-pen-nib mr-2 text-indigo-500"></i></i>
+                            <span>Blog</span>
+                        </a>
+                    </div>
+                </div>
 
-    <!-- Add mobile navigation -->
-    <nav class="mobile-nav">
-        <div class="p-8">
-            <ul class="space-y-6 text-center">
-                <li><a href="#about" class="text-white text-xl font-bold hover:text-gray-300 transition-all">About</a>
-                </li>
-                <li><a href="#skills" class="text-white text-xl font-bold hover:text-gray-300 transition-all">Skills</a>
-                </li>
-                <li><a href="#exploring"
-                        class="text-white text-xl font-bold hover:text-gray-300 transition-all">Exploring</a></li>
-                <li><a href="#education"
-                        class="text-white text-xl font-bold hover:text-gray-300 transition-all">Education</a></li>
-                <li><a href="#certifications" class="text-white text-xl font-bold hover:text-gray-300 transition-all">Certifications</a></li>
-                <li><a href="#contact"
-                        class="text-white text-xl font-bold hover:text-gray-300 transition-all">Contact</a></li>
-            </ul>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle"
+                        class="clay-button w-10 h-10 flex items-center justify-center rounded-full bg-white text-indigo-600 hover:bg-indigo-50 transition duration-300">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu (improved with animation and styling) -->
+            <div id="mobile-menu"
+                class="hidden md:hidden transition-all duration-300 overflow-hidden">
+                <div class="clay p-4 rounded-2xl bg-white space-y-3 mx-4 my-2">
+                    <a href="#about"
+                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
+                        <i class="fas fa-user mr-2 text-indigo-500"></i> About
+                    </a>
+                    <a href="#skills"
+                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
+                        <i class="fas fa-code mr-2 text-indigo-500"></i> Skills
+                    </a>
+                    <a href="#projects"
+                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
+                        <i class="fas fa-laptop-code mr-2 text-indigo-500"></i> Projects
+                    </a>
+                    <a href="#contact"
+                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
+                        <i class="fas fa-envelope mr-2 text-indigo-500"></i> Contact
+                    </a>
+                    <a href="#blog"
+                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
+                        <i class="fas fa-pen-nib mr-2 text-indigo-500"></i> Blog
+                    </a>
+                   
+
+                    <!-- Social icons in mobile menu -->
+                    <div class="pt-3 mt-3 border-t border-gray-100 flex justify-center space-x-4">
+                        <a href="https://github.com/ayushpatil0810" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/ayushpatil0810" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ayushpatil0810" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com/ayushpatil0810" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Navbar -->
-    <nav id="navbar" class="desktop-nav fixed top-0 w-full p-4 flex justify-center items-center z-50 navbar-transition">
-        <div class="neuro-nav">
-            <ul class="flex space-x-12 text-lg">
-                <li><a href="#about" class="nav-item transition hover-scale" style="animation-delay: 100ms"
-                        aria-label="About Section">About</a></li>
-                <li><a href="#skills" class="nav-item transition hover-scale" style="animation-delay: 200ms"
-                        aria-label="Skills Section">Skills</a></li>
-                <li><a href="#exploring" class="nav-item transition hover-scale" style="animation-delay: 300ms"
-                        aria-label="Exploring Section">Exploring</a></li>
-                <li><a href="#education" class="nav-item transition hover-scale" style="animation-delay: 400ms"
-                        aria-label="Education Section">Education</a></li>
-                <li><a href="#certifications" class="nav-item transition hover-scale" style="animation-delay: 500ms"
-                        aria-label="Certifications Section">Certifications</a></li>
-                <li><a href="#contact" class="nav-item transition hover-scale" style="animation-delay: 600ms"
-                        aria-label="Contact Section">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Header Section -->
-    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-        <div class="w-52 h-52 neuro-image animate-float" data-aos="zoom-in">
-            <img src="https://avatars.githubusercontent.com/u/94798136?v=4" alt="Ayush Patil"
-                class="w-full h-full object-cover rounded-full">
-        </div>
-        <h1 class="text-5xl font-extrabold mt-6" data-aos="fade-up">Hi, I'm Ayush Patil</h1>
-        <p class="text-2xl mt-4 max-w-xl" data-aos="fade-up" data-aos-delay="200">Student of AI & DS, and also exploring
-            the world of Cross Platform Mobile App Development with Flutter</p>
-        <a href="#contact" class="mt-6 inline-block px-6 py-3 rounded-full neuro-button" data-aos="fade-up"
-            data-aos-delay="400" aria-label="Get in Touch">
-            Get in Touch <i class="fa-solid fa-arrow-down"></i>
-        </a>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6">About Me</h2>
-            <p class="text-lg leading-relaxed">Hi, I am Ayush Patil 👋,
-                I am eager to learn new programming languages 💻 and technologies 🌐.
-                I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, and
-                building impactful projects 🔧💡.
-                I have a keen interest in computer hardware 🖱️ and am also excited to delve deeper into Machine
-                Learning 🤖 and Data Science 📊.
-                My goal is to gain valuable experience and knowledge in these areas 🌱.
-                I enjoy connecting with new people 🌍 and seeking opportunities that foster personal and
-                professional growth 💼. Outside of academics and tech, I love gaming 🎮!</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6">Skills</h2>
-            <div class="flex flex-wrap justify-center gap-6 mt-6">
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="100"><i
-                    class="fa-brands fa-python"></i> Python</span>
-                    <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="200">
-                        <svg class="inline-block w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-7.37-7.371 7.37-7.371h-7.37z"/>
-                        </svg>
-                        Flutter
-                    </span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="300">C
-                    Programming</span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="400">
-                    <svg class="inline-block w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H9.789l-9-9C.303 14.5 0 13.795 0 13.105c0-.319.18-.818.316-1.105l3.789-7.895zm.679.679v11.787c.002.543.021 1.024.498 1.508L10.204 23h8.533v-4.263L4.784 4.784zm12.055-.678c-.899-.896-1.809-1.78-2.74-2.643c-.302-.267-.567-.468-1.07-.462c-.37.014-.87.195-.87.195L6.341 4.105l10.498.001z"/>
-                    </svg>
-                    Dart
-                </span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="500"><i
-                        class="fa-solid fa-box"></i> Object Oriented Programming</span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="600">
-                    <svg class="inline-block w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.623zM4.456 5.896h2.622V24H4.456zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.447H8.67z"/>
-                    </svg>
-                    Pandas
-                </span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="700"><i
-                    class="fa-solid fa-bug"></i> Debugging</span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="800"><i
-                        class="fa-brands fa-html5"></i> HTML</span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="900"><i
-                        class="fa-brands fa-css3"></i> CSS</span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="1000">Virtual
-                    Machine</span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="1100"><i
-                        class="fab fa-github"></i> Github</span>
-                <span class="px-6 py-3 rounded-full neuro-tile" data-aos="zoom-in" data-aos-delay="1200"><i
-                        class="fab fa-turtle"></i> Turtle Graphics</span>
-                
+    <!-- Hero Section -->
+    <section
+        class="min-h-screen flex items-center justify-center pt-32 md:pt-20 pb-20 bg-gradient-to-b from-indigo-50 to-purple-50">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mt-10 md:mt-0">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
+                        <span id="title" class="typewriter"></span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600"></span>
+                    </h1>
+                    <p id="subtitle" class="text-xl text-gray-600 mb-8 typewriter"></p>
+                    <a href="#contact" class="clay-button inline-block px-8 py-3 text-indigo-600 font-semibold">Let's
+                        Connect</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="clay rounded-full h-64 w-64 p-2 bg-white">
+                        <div class="h-full w-full rounded-full overflow-hidden">
+                            <img src="https://avatars.githubusercontent.com/u/94798136?v=4" alt="Profile Picture"
+                                class="h-full w-full object-cover" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Exploring Section -->
-    <section id="exploring" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10 overflow-hidden" data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">What I'm Exploring</h2>
-            <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">I am diving deep into the world
-                of Flutter to create amazing cross-platform apps while also refining my knowledge of Python.</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <h2 class="text-4xl font-bold mb-16 text-center">About <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Me</span></h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-6">
+                    <div class="inline-block clay px-4 py-2 rounded-full bg-indigo-50">
+                        <span class="text-indigo-600 font-medium">👋 Get to know me</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-800">AI & DS Student at <span
+                            class="text-indigo-600">Dr. D. Y. Patil Institute of Technology, Pimpri</span></h3>
+
+                    <p class="text-gray-600">
+                        I'm passionate about exploring the intersection of technology and innovation. 
+                        🌐 I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, 
+                        and building impactful projects 🔧💡. As a student developer, I am learning to create beautiful, 
+                        functional websites and mobile applications 📱 while continuously learning and growing in the field of Artificial Intelligence 🤖 & Data Science 📊.
+                    </p>
+
+                    <div class="inline-block clay px-4 py-2 rounded-full bg-indigo-50">
+                        <span class="text-indigo-600 font-medium">❤️ loves to</span>
+                    </div>    
+                    <div class="grid grid-cols-2 gap-4 my-8">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-indigo-600"></i>
+                            <span class="text-gray-700">Code</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-indigo-600"></i>
+                            <span class="text-gray-700">Learn more about Computer Hardware</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-indigo-600"></i>
+                            <span class="text-gray-700">Game</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-indigo-600"></i>
+                            <span class="text-gray-700">Listen to music</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center pt-4">
+                        <a href="#contact"
+                            class="clay-button px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-full hover:shadow-lg transition duration-300 flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10 overflow-hidden" data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Education</h2>
-            <h2 class="text-2xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200">Dr. D. Y. Patil Institute of
-                Technology, Pimpri, Pune 🎓</h2>
-            <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="400">Currently pursuing Bachelor of
-                Engineering in the field of Artificial Intelligence and Data Science (AI & DS)🤖📊</p>
+    <!-- Improved Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-b from-gray-50 to-indigo-50">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <h2 class="text-4xl font-bold mb-16 text-center">My <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Skills</span>
+            </h2>
+
+            <h3 class="text-2xl font-semibold mb-8 text-indigo-600">Technical Skills</h3>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
+                    <div class="h-12 flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-4xl text-indigo-600"></i>
+                    </div>
+                    <p class="font-medium text-lg">Data Analysis</p>
+                    <p class="text-gray-500 text-sm mt-2">Data Processing & Visualization</p>
+                </div>
+
+                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
+                    <div class="h-12 flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-4xl text-indigo-600"></i>
+                    </div>
+                    <p class="font-medium text-lg">Machine Learning</p>
+                    <p class="text-gray-500 text-sm mt-2">AI & ML Models</p>
+                </div>
+
+                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
+                    <div class="h-12 flex items-center justify-center mb-4">
+                        <img src="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png"
+                            alt="Flutter" class="h-10 w-auto object-contain">
+                    </div>
+                    <p class="font-medium text-lg">Flutter</p>
+                    <p class="text-gray-500 text-sm mt-2">Cross-Platform Development</p>
+                </div>
+
+                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
+                    <div class="h-12 flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-4xl text-indigo-600"></i>
+                    </div>
+                    <p class="font-medium text-lg">Web Development</p>
+                    <p class="text-gray-500 text-sm mt-2">Frontend & Backend</p>
+                </div>
+            </div>
+
+
+            <h3 class="text-2xl font-semibold mb-8 mt-16 text-indigo-600">Additional Skills</h3>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/python.svg" alt="Python" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Python</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/c.png" alt="C" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">C Language</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/dart.png" alt="Dart" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Dart</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/html5.png" alt="HTML5" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">HTML</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/css3.svg" alt="CSS" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">CSS</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/bootstrap.png" alt="Bootstrap" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Bootstrap</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/tailwind.png" alt="Tailwind" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Tailwind</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/pandas.svg" alt="Pandas" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Pandas</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/numpy.svg" alt="NumPy" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">NumPy</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <i class="fas fa-code text-2xl text-indigo-600 w-8 text-center"></i>
+                    <span class="text-gray-700 font-medium">OOP</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/github.png" alt="GitHub" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">GitHub</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/git.png" alt="Git" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Git</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/python.svg" alt="Tkinter" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Tkinter</span>
+                </div>
+
+                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
+                    <img src="images/skills/selenium.png" alt="Selenium" class="h-8 w-8 object-contain">
+                    <span class="text-gray-700 font-medium">Selenium</span>
+                </div>
+            </div>
+
+            <div class="mt-16 flex justify-center">
+                <a href="#" class="clay-button px-8 py-3 text-indigo-600 font-semibold inline-flex items-center">
+                    <span>See my resume</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10 overflow-hidden" data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Certifications</h2>
-            <div class="cert-grid">
-                <!-- Python Certificate -->
-                <div class="neuro-tile p-6 rounded-lg hover-scale cert-card" data-aos="fade-up" data-aos-delay="100">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3">Basics of Python</h3>
-                        <p class="text-gray-600 mb-3">Infosys SpringBoard</p>
-                        <p class="text-sm mb-4">Completion Date: January 2025</p>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <h2 class="text-4xl font-bold mb-16 text-center">My <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Certifications</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certification 1 -->
+                <div class="clay p-6 rounded-2xl bg-white hover:bg-indigo-50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <!-- <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center"> -->
+                            <img src="images/skills/python.svg" alt="Python" class="h-10 w-auto object-contain">
+                            <!-- <i class="fas fa-code text-purple-600 text-xl"></i> -->
+                            <!-- </div> -->
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Basics Of Python</h3>
+                            <p class="text-gray-600 text-sm mb-3">Infosys Springboard</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>Issued Jan 2025</span>
+                            </div>
+                            <a href="#"
+                                onclick="openCertificateModal('certificates/basics_of_python.jpg'); return false;"
+                                class="inline-flex items-center text-indigo-600 text-sm mt-3 hover:text-purple-600 transition-colors duration-300">
+                                <span>View Certificate</span>
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
                     </div>
-                    <button onclick="showPopup('certificates/basics_of_python_certificate.jpg')" 
-                            class="text-blue-600 hover:text-blue-800 transition-colors">
-                        <i class="fas fa-external-link-alt mr-2"></i>View Certificate
-                    </button>
                 </div>
 
-                <!-- C programming Certificate-->
-                <div class="neuro-tile p-6 rounded-lg hover-scale cert-card" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-3">Programming in C</h3>
-                        <p class="text-gray-600 mb-3">Infosys SpringBoard</p>
-                        <p class="text-sm mb-4">Completion Date: January 2025</p>
+                <!-- Certification 2 -->
+                <div class="clay p-6 rounded-2xl bg-white hover:bg-indigo-50 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                            <!-- <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center"> -->
+                            <img src="images/skills/c.png" alt="Python" class="h-10 w-auto object-contain">
+                            <!-- <i class="fas fa-code text-purple-600 text-xl"></i> -->
+                            <!-- </div> -->
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Programming in C</h3>
+                            <p class="text-gray-600 text-sm mb-3">Infosys Springboard</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-calendar-alt mr-2"></i>
+                                <span>Issued Mar 2025</span>
+                            </div>
+                            <a href="#"
+                                onclick="openCertificateModal('certificates/programming_in_c.jpg'); return false;"
+                                class="inline-flex items-center text-indigo-600 text-sm mt-3 hover:text-purple-600 transition-colors duration-300">
+                                <span>View Certificate</span>
+                                <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                        </div>
                     </div>
-                    <button onclick="showPopup('certificates/programming_in_c_certificate.jpg')" 
-                            class="text-blue-600 hover:text-blue-800 transition-colors">
-                        <i class="fas fa-external-link-alt mr-2"></i>View Certificate
-                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificate Popup -->
-    <div class="certificate-popup" id="certificatePopup">
-        <div class="popup-content">
-            <button class="close-popup" onclick="closePopup()" aria-label="Close popup">
-                <i class="fas fa-times"></i>
-            </button>
-            <img id="popupImage" src="" alt="Certificate" loading="lazy">
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-b from-purple-50 to-indigo-50">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <h2 class="text-4xl font-bold mb-16 text-center">My <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Projects</span>
+            </h2>
+            
+            
+            <!-- Recent projects container -->
+            <div id="recent-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project cards will be inserted here -->
+            </div>
+
+            <!-- View more button -->
+            <div class="text-center mt-12">
+                <button onclick="showAllProjects()" class="clay-button px-8 py-3 text-indigo-600 font-semibold inline-flex items-center gap-2">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- All projects modal -->
+            <div id="projects-modal" class="fixed inset-0 z-50 hidden">
+                <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+                <div class="relative min-h-screen md:min-h-[auto] md:h-[90vh] w-full md:max-w-6xl mx-auto mt-0 md:mt-10 bg-white rounded-none md:rounded-2xl overflow-hidden">
+                    <div class="sticky top-0 bg-white z-10 px-6 py-4 border-b flex justify-between items-center">
+                        <h3 class="text-xl font-semibold">All Projects</h3>
+                        <button onclick="closeAllProjects()" class="clay-social w-10 h-10 flex items-center justify-center">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="p-6 overflow-y-auto max-h-[calc(90vh-80px)]">
+                        <div id="all-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <!-- All project cards will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this after the Projects section and before the Contact section -->
+    <section class="py-20 bg-white" id="blog">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <h2 class="text-4xl font-bold mb-16 text-center">Latest <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Blogs</span>
+            </h2>
+            
+            <!-- Recent blogs container -->
+            <div id="recent-blogs" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Blog cards will be inserted here -->
+            </div>
+
+            <!-- View more button -->
+            <div class="text-center">
+                <button onclick="showAllBlogs()" id="view-more" class="clay-button px-8 py-3 text-indigo-600 font-semibold inline-flex items-center gap-2">
+                    <span>View More</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- All blogs modal -->
+            <div id="blogs-modal" class="fixed inset-0 z-50 hidden">
+                <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+                <div class="relative min-h-screen md:min-h-[auto] md:h-[90vh] w-full md:max-w-6xl mx-auto mt-0 md:mt-10 bg-white rounded-none md:rounded-2xl overflow-hidden">
+                    <div class="sticky top-0 bg-white z-10 px-6 py-4 border-b flex justify-between items-center">
+                        <h3 class="text-xl font-semibold">All Blog Posts</h3>
+                        <button onclick="closeAllBlogs()" class="clay-social w-10 h-10 flex items-center justify-center">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="p-6 overflow-y-auto max-h-[calc(90vh-80px)]">
+                        <div id="all-blogs" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- All blog cards will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Modified) -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-purple-50 to-indigo-50">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <h2 class="text-4xl font-bold mb-16 text-center">Get in <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Touch</span>
+            </h2>
+            <!-- <div class="clay p-8 rounded-3xl bg-white"> -->
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Contact Information</h3>
+                <p class="text-gray-600 mb-6">Feel free to reach out to me for any inquiries, collaborations, or just to
+                    say hello! I'm always open to discussing new projects and ideas.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4"></i>
+                        <span>ayushppatil2006@gmail.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4"></i>
+                        <span>Pune, Maharashtra, India</span>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Follow Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/ayushpatil0810" class="clay-social w-12 h-12 flex items-center justify-center">
+                            <i class="fab fa-github text-indigo-600 text-xl"></i>
+                        </a>
+                        <a href="https://x.com/ayushpatil0810" class="clay-social w-12 h-12 flex items-center justify-center">
+                            <i class="fab fa-twitter text-indigo-600 text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ayushpatil0810" class="clay-social w-12 h-12 flex items-center justify-center">
+                            <i class="fab fa-linkedin-in text-indigo-600 text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/ayushpatil0810" class="clay-social w-12 h-12 flex items-center justify-center">
+                            <i class="fab fa-instagram text-indigo-600 text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gradient-to-b from-gray-900 via-indigo-900 to-purple-900 text-white">
+        <div class="container mx-auto px-6 md:px-8 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About Column -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="AP Logo" class="w-10 h-10 rounded-lg clay-social bg-white/10">
+                        <span class="text-xl font-bold text-white">Ayush Patil</span>
+                    </div>
+                    <p class="text-indigo-200 mb-4">Creating beautiful digital experiences with a focus on user-centric design and modern technologies.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/ayushpatil0810" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                        <a href="https://x.com/ayushpatil0810" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ayushpatil0810" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="https://instagram.com/ayushpatil0810" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#about" class="text-indigo-200 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="text-indigo-200 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Skills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="text-indigo-200 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-indigo-200 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="text-indigo-200 hover:text-white transition-colors flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Blog
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-indigo-200">
+                            <i class="fas fa-envelope w-5 mr-2"></i>
+                            ayushppatil2006@gmail.com
+                        </li>
+                        <li class="flex items-center text-indigo-200">
+                            <i class="fas fa-map-marker-alt w-5 mr-2"></i>
+                            Pune, Maharashtra, India
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-indigo-200 mb-4">Subscribe to get latest updates and news.</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Enter your email" 
+                            class="px-4 py-2 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300">
+                        <button type="submit" 
+                            class="clay-button px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-700 my-8"></div>
+
+            <!-- Bottom Footer -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-indigo-200 text-sm">
+                <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="certificateModal" class="fixed inset-0 z-50 hidden flex items-center justify-center px-4">
+        <div class="modal-backdrop absolute inset-0 bg-black/50"></div>
+        <div class="modal-content relative w-full max-w-4xl">
+            <div class="clay p-2 rounded-3xl bg-white">
+                <button onclick="closeCertificateModal()"
+                    class="absolute top-4 right-4 clay-social w-10 h-10 flex items-center justify-center bg-white text-gray-600 hover:text-indigo-600">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img id="certificateImage" src="" alt="Certificate" class="w-full h-auto rounded-2xl">
+            </div>
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="px-8">
-        <div class="glass max-w-5xl mx-auto text-center p-10" data-aos="fade-up">
-            <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
-            <p class="text-lg leading-relaxed mb-8">Feel free to reach out to me on any of these platforms !</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="mailto:ayushppatil2006@gmail.com" class="nav-icon" data-aos="zoom-in" data-aos-delay="100"
-                    aria-label="Email">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
-                <a href="https://github.com/ayushpatil0810" class="nav-icon" data-aos="zoom-in" data-aos-delay="200"
-                    aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://x.com/ayushpatil0810" class="nav-icon" data-aos="zoom-in" data-aos-delay="300"
-                    aria-label="Twitter Profile" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com/in/ayushpatil0810" class="nav-icon" data-aos="zoom-in"
-                    data-aos-delay="400" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com/ayushpatil0810" class="nav-icon" data-aos="zoom-in" data-aos-delay="500"
-                    aria-label="Instagram Profile" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center py-2 text-sm text-gray-700">
-        <div class="p-4 rounded-lg">
-            <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
-        </div>
-    </footer>
-    <!-- Go to Top Button -->
-    <button id="go-to-top" onclick="scrollToTop()">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
     <script>
-        // Get the button
-        var mybutton = document.getElementById("go-to-top");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = 'block';
-                setTimeout(() => mybutton.classList.remove('slide-out'), 10);
-            } else {
-                mybutton.classList.add('slide-out');
-                setTimeout(() => mybutton.style.display = 'none', 300); // Match transition duration
-            }
-        };
-
-        // When the user clicks the button, scroll to the top of the document
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Navbar auto-hide and reappear
-        let lastScrollTop = 0;
-        const navbar = document.getElementById('navbar');
-
+        // Navbar scroll effect
         window.addEventListener('scroll', function () {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            // Only show navbar and hamburger when completely scrolled to top
-            if (scrollTop === 0) {
-                navbar.classList.remove('hidden');
-                navbar.classList.remove('nav-bg');
-                mobileMenu.classList.remove('slide-out');
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
             } else {
-                navbar.classList.add('hidden');
-                navbar.classList.add('nav-bg');
-                mobileMenu.classList.add('slide-out');
-                // Also close mobile menu if it's open
-                mobileNav.classList.remove('active');
-                menuOverlay.style.display = 'none';
-                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                navbar.classList.remove('shadow-md');
             }
-
-            lastScrollTop = scrollTop;
         });
 
-        // Initialize AOS with updated settings
-        AOS.init({
-            duration: 800,
-            offset: 100,
-            easing: 'ease-in-out',
-            mirror: true, // whether elements should animate out while scrolling past them
-            anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
+        // Improved mobile menu toggle with animation
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+
+            if (!mobileMenu.classList.contains('hidden')) {
+                const height = mobileMenu.querySelector('.clay').offsetHeight;
+                mobileMenu.style.maxHeight = height + 16 + 'px'; // Add padding
+            } else {
+                mobileMenu.style.maxHeight = '0';
+            }
         });
 
-        // Mobile menu functionality
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const menuOverlay = document.querySelector('.menu-overlay');
-
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            menuOverlay.style.display = mobileNav.classList.contains('active') ? 'block' : 'none';
-
-            // Animate the icon
-            mobileMenu.innerHTML = mobileNav.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
+        // Close mobile menu on window resize if screen becomes larger
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) { // md breakpoint
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.add('hidden');
+                mobileMenu.style.maxHeight = '0';
+            }
         });
 
-        // Close mobile menu when clicking overlay
-        menuOverlay.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            menuOverlay.style.display = 'none';
-            mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
-        });
-
-        // Close mobile menu when clicking links
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                menuOverlay.style.display = 'none';
-                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
+        // Intersection Observer for scrolling animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
             });
+        }, {
+            threshold: 0.1
         });
 
-        // Certificate popup functions
-        function showPopup(imagePath) {
-            const popup = document.getElementById('certificatePopup');
-            const popupImage = document.getElementById('popupImage');
-            popupImage.src = imagePath;
-            popup.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        function openCertificateModal(imageSrc) {
+            const modal = document.getElementById('certificateModal');
+            const img = document.getElementById('certificateImage');
+            img.src = imageSrc;
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-open');
+            setTimeout(() => {
+                modal.classList.add('modal-active');
+            }, 10);
         }
 
-        function closePopup() {
-            const popup = document.getElementById('certificatePopup');
-            popup.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.classList.remove('modal-active');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.classList.remove('modal-open');
+            }, 300);
         }
 
-        // Close popup when clicking outside the image
-        document.getElementById('certificatePopup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePopup();
+        // Close modal on backdrop click
+        document.querySelector('.modal-backdrop').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeCertificateModal();
             }
         });
 
-        // Close popup with Escape key
+        // Close modal on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeCertificateModal();
+            }
+        });
+
+        // Single mobile menu toggle function
+        const menuButton = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuButton.querySelector('i');
+
+        function toggleMenu(show) {
+            if (show === undefined) {
+                mobileMenu.classList.toggle('active');
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-times');
+            } else {
+                mobileMenu.classList.toggle('active', show);
+                menuIcon.classList.toggle('fa-bars', !show);
+                menuIcon.classList.toggle('fa-times', show);
+            }
+        }
+
+        // Click handler for menu button
+        menuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
+                toggleMenu(false);
+            }
+        });
+
+        // Close menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
+
+        // Close menu on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                toggleMenu(false);
+            }
+        });
+
+        // Prevent clicks inside menu from closing it
+        mobileMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        // Typewriter effect function
+        function typeWriter(element, text, speed = 50, delay = 0) {
+            return new Promise(resolve => {
+                let i = 0;
+                setTimeout(() => {
+                    function type() {
+                        if (i < text.length) {
+                            element.textContent += text.charAt(i);
+                            i++;
+                            setTimeout(type, speed);
+                        } else {
+                            element.classList.add('typing-complete');
+                            resolve();
+                        }
+                    }
+                    type();
+                }, delay);
+            });
+        }
+
+        // Initialize typewriter effects
+        async function initTypewriter() {
+            const titleElement = document.getElementById('title');
+            const subtitleElement = document.getElementById('subtitle');
+
+            // First text animation
+            await typeWriter(titleElement, "Hi, I'm ");
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600';
+            titleElement.appendChild(nameSpan);
+            await typeWriter(nameSpan, 'Ayush Patil,');
+
+            // Second text animation with delay
+            await typeWriter(
+                subtitleElement, 
+                "Student of Artificial Intelligence & Data Science, and also exploring the world of Cross Platform Mobile App Development with Flutter.",
+                30,  // Slightly faster typing speed
+                500   // Delay before starting
+            );
+        }
+
+        // Start the typewriter effect when the page loads
+        document.addEventListener('DOMContentLoaded', initTypewriter);
+
+        // Add active class to nav links on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function highlightNavOnScroll() {
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector(`.nav-link[href="#${sectionId}"]`)?.classList.add('active');
+                } else {
+                    document.querySelector(`.nav-link[href="#${sectionId}"]`)?.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightNavOnScroll);
+        window.addEventListener('load', highlightNavOnScroll);
+
+        // Blog functionality
+        function createBlogCard(blog) {
+            return `
+                <div class="clay p-6 rounded-2xl bg-white hover:bg-indigo-50 transition-all duration-300">
+                    <div class="relative mb-4 rounded-xl overflow-hidden">
+                        <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
+                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-indigo-600">
+                            ${blog.category}
+                        </span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center text-sm text-gray-500 gap-4">
+                            <span><i class="far fa-calendar mr-1"></i> ${new Date(blog.date).toLocaleDateString()}</span>
+                            <span><i class="far fa-clock mr-1"></i> ${blog.readTime}</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">${blog.title}</h3>
+                        <p class="text-gray-600">${blog.excerpt}</p>
+                        <a href="${blog.link}" class="inline-flex items-center text-indigo-600 hover:text-purple-600">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function initializeBlogs() {
+            const recentBlogsContainer = document.getElementById('recent-blogs');
+            // Sort blogs by date in descending order (most recent first)
+            const sortedBlogs = blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+            const recentBlogs = sortedBlogs.slice(0, 2); // Get two most recent blogs
+            
+            recentBlogsContainer.innerHTML = recentBlogs.map(blog => createBlogCard(blog)).join('');
+        }
+
+        function showAllBlogs() {
+            const modal = document.getElementById('blogs-modal');
+            const allBlogsContainer = document.getElementById('all-blogs');
+            
+            allBlogsContainer.innerHTML = blogs.map(blog => createBlogCard(blog)).join('');
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeAllBlogs() {
+            const modal = document.getElementById('blogs-modal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Initialize blogs when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeBlogs();
+        });
+
+        // Close modal on escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                closePopup();
+                closeAllBlogs();
+            }
+        });
+
+        // Add this to your existing script section
+        function createProjectCard(project) {
+            return `
+                <div class="clay-card p-6 rounded-3xl bg-white">
+                    <div class="mb-4 rounded-2xl overflow-hidden">
+                        <img src="${project.image}" alt="${project.title}"
+                            class="w-full transition duration-300 hover:scale-105" />
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">${project.title}</h3>
+                    <p class="text-gray-600 mb-4">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        ${project.technologies.map(tech => 
+                            `<span class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full">${tech}</span>`
+                        ).join('')}
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="${project.demoLink}" class="text-indigo-600 hover:text-purple-600 transition duration-300">
+                            <i class="fas fa-eye"></i> Demo
+                        </a>
+                        <a href="${project.codeLink}" class="text-indigo-600 hover:text-purple-600 transition duration-300">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function initializeProjects() {
+            const recentProjectsContainer = document.getElementById('recent-projects');
+            const recentProjects = projects.slice(0, 3); // Get only the three most recent projects
+            
+            recentProjectsContainer.innerHTML = recentProjects.map(project => createProjectCard(project)).join('');
+        }
+
+        function showAllProjects() {
+            const modal = document.getElementById('projects-modal');
+            const allProjectsContainer = document.getElementById('all-projects');
+            
+            allProjectsContainer.innerHTML = projects.map(project => createProjectCard(project)).join('');
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeAllProjects() {
+            const modal = document.getElementById('projects-modal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Initialize projects when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeProjects();
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeAllProjects();
             }
         });
     </script>
-
+    <script src="js/blogs.js"></script>
+    <script src="js/projects.js"></script>
 </body>
-
+</html>
+</body>
 </html>
