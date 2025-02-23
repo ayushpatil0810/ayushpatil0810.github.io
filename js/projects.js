@@ -2,7 +2,7 @@ const projects = [
     {
         id: 1,
         title: "Pomodoro App",
-        description: "A fully responsive e-commerce platform with shopping cart functionality and payment integration.",
+        description: "A Pomodoro Timer app built with Python and Tkinter",
         image: "images/projects/pomodoro.png",
         technologies: ["Python", "Tkinter"],
         demoLink: "https://github.com/ayushpatil0810/Tkinter-Projects",
