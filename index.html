@@ -1,1220 +1,628 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="-vCXCGeqTPeAv9v4GeJiiwqOt346LW6nl3otstEwE0Q" />
-    <meta name="description" content="Ayush Patil's Portfolio">
     <meta name="keywords"
         content="ayushpatil0810, ayush patil, Ayush Patil, python, dy patil, dit pimpri, dit, dy patil institute of technology pimpri, dy patil institute of technology pimpri pune, py patil institute of technology pune">
+
+    <meta name="title" content="Ayush Patil" />
     <meta name="author" content="Ayush Patil">
+    <meta name="description" content="Student & Developer" />
 
-    <meta itemprop="name" content="Ayush Patil's Portfolio" />
-    <meta itemprop="description" content="Ayush Patil's Portfolio" />
-    <meta itemprop="image" content="images/profile.jpg" />
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://ayushpatil0810.github.io/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ayush Patil's Portfolio" />
-    <meta property="og:description" content="Ayush Patil's Portfolio" />
-    <meta property="og:image" content="images/profile.jpg" />
+    <meta property="og:url" content="https://ayushpatil0810.github.io/" />
+    <meta property="og:title" content="Ayush Patil" />
+    <meta property="og:description" content="Student & Developer" />
+    <meta property="og:image" content="assets/images/link-preview.png" />
 
-    <!-- LinkedIn Meta Tags -->
-<meta property="og:title" content="Ayush Patil's Portfolio" />
-<meta property="og:description" content="Showcasing Ayush Patil's projects and accomplishments" />
-<meta property="og:image" content="images/profile.jpg" />
-<meta property="og:url" content="https://ayushpatil0810.github.io/" />
-<meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ayushpatil0810.github.io/" />
+    <meta property="twitter:title" content="Ayush Patil" />
+    <meta property="twitter:description" content="Student & Developer" />
+    <meta property="twitter:image" content="assets/images/link-preview.png" />
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ayush Patil's Portfolio" />
-    <meta name="twitter:description" content="Ayush Patil's Portfolio" />
-    <meta name="twitter:image" content="images/profile.jpg" />
-    <title>Portfolio - Ayush Patil</title>
+    <title>Ayush Patil</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="./images/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Update Claymorphism effect styles */
-        :root {
-            --clay-background: #f6f9fc;
-            --clay-shadow-outset: 
-                0 10px 40px -10px rgba(0, 0, 0, 0.2),
-                0 5px 15px -7px rgba(0, 0, 0, 0.15),
-                0 2px 8px -2px rgba(0, 0, 0, 0.1);
-            --clay-shadow-inset: 
-                inset 2px 2px 7px rgba(255, 255, 255, 0.8),
-                inset -3px -3px 7px rgba(0, 0, 0, 0.2);
-            --clay-shadow-pressed: 
-                inset 3px 3px 7px rgba(0, 0, 0, 0.2),
-                inset -3px -3px 7px rgba(255, 255, 255, 0.5);
-            --clay-radius: 24px;  /* Slightly larger radius */
-        }
-
-        .clay {
-            background: var(--clay-background);
-            border-radius: var(--clay-radius);
-            box-shadow: var(--clay-shadow-outset);
-            position: relative;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .clay:hover {
-            transform: translateY(-7px);  /* Increased lift effect */
-            box-shadow: 
-                0 20px 40px -15px rgba(0, 0, 0, 0.25),
-                0 10px 20px -10px rgba(0, 0, 0, 0.15);
-        }
-
-        .clay-button {
-            background: var(--clay-background);
-            border-radius: 50px;
-            box-shadow: var(--clay-shadow-outset);
-            position: relative;
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .clay-button:hover {
-            transform: translateY(-5px);  /* Increased lift effect */
-            box-shadow: 
-                0 15px 30px -10px rgba(0, 0, 0, 0.2),
-                0 8px 15px -5px rgba(0, 0, 0, 0.15);
-        }
-
-        .clay-button:active {
-            box-shadow: var(--clay-shadow-pressed);
-            transform: translateY(0);
-        }
-
-        .clay-pressed {
-            box-shadow: var(--clay-shadow-inset);
-        }
-
-        .clay-social {
-            background: var(--clay-background);
-            border-radius: 50%;
-            box-shadow: var(--clay-shadow-outset);
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .clay-social:hover {
-            transform: translateY(-5px);  /* Increased lift effect */
-            box-shadow: 
-                0 15px 30px -10px rgba(0, 0, 0, 0.2),
-                0 8px 15px -5px rgba(0, 0, 0, 0.15);
-        }
-
-        .clay-gradient {
-            background: linear-gradient(135deg, #f8f9fa, #ebedef);
-        }
-
-        .clay-card {
-            background: var(--clay-background);
-            border-radius: var(--clay-radius);
-            box-shadow: var(--clay-shadow-outset);
-            transition: all 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .clay-card:hover {
-            transform: translateY(-7px);  /* Increased lift effect */
-            box-shadow: 
-                0 20px 40px -15px rgba(0, 0, 0, 0.25),
-                0 10px 20px -10px rgba(0, 0, 0, 0.15);
-        }
-
-        body {
-            background-color: #f0f4f8;
-            background-image: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
-            min-height: 100vh;
-            background-attachment: fixed;
-            font-family: 'Nunito Sans', sans-serif;
-        }
-
-        /* Mobile menu animation */
-        #mobile-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            max-height: 0;
-            transition: all 0.3s ease-out;
-            overflow: hidden;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 50;  /* Add z-index */
-            background-color: transparent;
-        }
-
-        #mobile-menu.active {
-            max-height: 500px; /* Large enough to contain content */
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Add container padding to prevent content shift */
-        .nav-container {
-            position: relative;
-            padding-bottom: 0;
-        }
-
-        /* Ensure navbar height remains fixed */
-        .nav-height {
-            height: 72px; /* Adjust this value based on your navbar height */
-        }
-
-        /* Modal styles */
-        .modal-backdrop {
-            backdrop-filter: blur(8px);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal-content {
-            transform: scale(0.95);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .modal-open {
-            overflow: hidden;
-        }
-
-        .modal-active .modal-backdrop {
-            opacity: 1;
-        }
-
-        .modal-active .modal-content {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        /* Add responsive padding for sections */
-        @media (max-width: 768px) {
-            section {
-                padding-top: 6rem;
-            }
-            section:first-of-type {
-                padding-top: 7rem;
-            }
-        }
-
-        /* Typewriter cursor effect */
-        .typewriter::after {
-            content: '|';
-            animation: blink 0.7s steps(2) infinite;  /* Changed from 1s to 0.7s and added steps(2) */
-            display: inline-block;
-            margin-left: 2px;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        /* Hide cursor when typing is complete */
-        .typewriter.typing-complete::after {
-            display: none;
-        }
-
-        /* Add these new nav link styles */
-        .nav-link {
-            position: relative;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(to right, #6366f1, #a855f7);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-link.active::after {
-            width: 100%;
-        }
-
-        .nav-link:hover {
-            color: #4F46E5;
+        .preload * {
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -ms-transition: none !important;
+            -o-transition: none !important;
+            transition: none !important;
         }
     </style>
+    <script>
+        // Remove preload class after page loads to enable animations
+        window.addEventListener('load', () => {
+            document.body.classList.remove('preload');
+        });
+    </script>
 </head>
 
-<body class="font-sans text-gray-800 min-h-screen">
-    <!-- Improved Navbar -->
-    <nav class="fixed w-full z-50 bg-gradient-to-r from-white/95 via-indigo-50/95 to-white/95 backdrop-filter backdrop-blur-lg shadow-md"
-        id="navbar">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12 nav-container">
-            <div class="flex justify-between items-center nav-height">
-                <!-- Updated Logo and brand -->
-                <a href="#" class="flex items-center gap-3">
-                    <img src="images/logo.png" width="40" alt="AP Logo" class="rounded-lg clay-social">
-                    <span class="text-xl font-bold text-indigo-600">Ayush Patil</span>
+<body class="preload">
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">Ayush Patil</a>
+                <!-- <img src="Untitled.png" alt="Ayush" loading="lazy"> -->
+            </div>
+            <nav class="main-navbar">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#github-stats">GitHub Stats</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Ayush</span></h1>
+                    <h2>
+                        <span class="typed-text-wrapper">
+                            <span class="typed-text"></span>
+                            <span class="typed-cursor">|</span>
+                        </span>
+                    </h2>
+                    <p>Student of Artificial Intelligence & Data Science,
+                        and also exploring Web Development & Cross Platform App Development with Flutter.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img-container">
+                        <img src="assets/images/profile.jpg" alt="Ayush" class="profile-img" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
                 </a>
-
-                <!-- Updated Desktop Navigation with icons -->
-                <div class="hidden md:flex items-center">
-                    <div class="flex items-center space-x-4">
-                        <a href="#about" class="nav-link flex items-center gap-2">
-                            <i class="fas fa-user text-indigo-500"></i>
-                            <span>About</span>
-                        </a>
-                        <a href="#skills" class="nav-link flex items-center gap-2">
-                            <i class="fas fa-code text-indigo-500"></i>
-                            <span>Skills</span>
-                        </a>
-                        <a href="#projects" class="nav-link flex items-center gap-2">
-                            <i class="fas fa-laptop-code text-indigo-500"></i>
-                            <span>Projects</span>
-                        </a>
-                        <a href="#contact" class="nav-link flex items-center gap-2">
-                            <i class="fas fa-envelope text-indigo-500"></i>
-                            <span>Contact</span>
-                        </a>
-                        <a href="#blog" class="nav-link flex items-center gap-2">
-                            <i class="fas fa-pen-nib mr-2 text-indigo-500"></i></i>
-                            <span>Blog</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="menu-toggle"
-                        class="clay-button w-10 h-10 flex items-center justify-center rounded-full bg-white text-indigo-600 hover:bg-indigo-50 transition duration-300">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile menu (improved with animation and styling) -->
-            <div id="mobile-menu"
-                class="hidden md:hidden transition-all duration-300 overflow-hidden">
-                <div class="clay p-4 rounded-2xl bg-white space-y-3 mx-4 my-2">
-                    <a href="#about"
-                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
-                        <i class="fas fa-user mr-2 text-indigo-500"></i> About
-                    </a>
-                    <a href="#skills"
-                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
-                        <i class="fas fa-code mr-2 text-indigo-500"></i> Skills
-                    </a>
-                    <a href="#projects"
-                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
-                        <i class="fas fa-laptop-code mr-2 text-indigo-500"></i> Projects
-                    </a>
-                    <a href="#contact"
-                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
-                        <i class="fas fa-envelope mr-2 text-indigo-500"></i> Contact
-                    </a>
-                    <a href="#blog"
-                        class="block py-3 px-4 text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-xl transition duration-300">
-                        <i class="fas fa-pen-nib mr-2 text-indigo-500"></i> Blog
-                    </a>
-                   
-
-                    <!-- Social icons in mobile menu -->
-                    <div class="pt-3 mt-3 border-t border-gray-100 flex justify-center space-x-4">
-                        <a href="https://github.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://x.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://instagram.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-9 h-9 flex items-center justify-center text-indigo-600">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section
-        class="min-h-screen flex items-center justify-center pt-32 md:pt-20 pb-20 bg-gradient-to-b from-indigo-50 to-purple-50">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mt-10 md:mt-0">
-                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-                        <span id="title" class="typewriter"></span>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600"></span>
-                    </h1>
-                    <p id="subtitle" class="text-xl text-gray-600 mb-8 typewriter"></p>
-                    <a href="#contact" class="clay-button inline-block px-8 py-3 text-indigo-600 font-semibold">Let's
-                        Connect</a>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="clay rounded-full h-64 w-64 p-2 bg-white">
-                        <div class="h-full w-full rounded-full overflow-hidden">
-                            <img src="images/profile.jpg" alt="Profile Picture"
-                                class="h-full w-full object-cover" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-4xl font-bold mb-16 text-center">About <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Me</span></h2>
-            <div class="max-w-3xl mx-auto">
-                <div class="space-y-6">
-                    <div class="inline-block clay px-4 py-2 rounded-full bg-indigo-50">
-                        <span class="text-indigo-600 font-medium">👋 Get to know me</span>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h3>About Me</h3>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/programmer.gif" alt="About Ayush" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <h4>Who am I?</h4>
+                    <p>I'm an enthusiastic student with a keen interest in software development. I enjoy creating
+                        responsive, user-focused applications and take pride in writing clean, efficient code. I'm
+                        passionate about intuitive design and aim to develop solutions that have a positive impact.</p>
+                    <p>I am currently pursuing a degree in AI & DS in Dr. D. Y. Patil Institute of Technology, Pune,
+                        where I am developing a solid foundation in programming principles, data structures, Data
+                        Science and Machine Learning.</p>
+
+                    <div class="experience-box">
+                        <div class="experience-item">
+                            <div class="icon-box">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="experience-info">
+                                <h5>Experience</h5>
+                                <p>-</p>
+                            </div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="icon-box">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="experience-info">
+                                <h5>Education</h5>
+                                <p>Pursuing B.E. in Artificial Intelligence & Data Science</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <h3 class="text-2xl font-bold text-gray-800">AI & DS Student at <span
-                            class="text-indigo-600">Dr. D. Y. Patil Institute of Technology, Pimpri</span></h3>
+                    <p>Outside of coding, I enjoy playing video games 🎮.</p>
 
-                    <p class="text-gray-600">
-                        I'm passionate about exploring the intersection of technology and innovation. 
-                        🌐 I enjoy exploring different operating systems 🖥️ and am passionate about coding, problem-solving, 
-                        and building impactful projects 🔧💡. As a student developer, I am learning to create beautiful, 
-                        functional websites and mobile applications 📱 while continuously learning and growing in the field of Artificial Intelligence 🤖 & Data Science 📊.
-                    </p>
+                    <a href="assets/resume.pdf" download class="btn btn-primary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="inline-block clay px-4 py-2 rounded-full bg-indigo-50">
-                        <span class="text-indigo-600 font-medium">❤️ loves to</span>
-                    </div>    
-                    <div class="grid grid-cols-2 gap-4 my-8">
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-indigo-600"></i>
-                            <span class="text-gray-700">Code</span>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h3>My Skills</h3>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="skills-content">
+                <div class="main-skills">
+                    <h4 class="scroll-animation animate-fade-up">Main Skills</h4>
+                    <div class="main-skills-grid">
+
+                        <div class="main-skill-item scroll-animation animate-fade-up delay-100">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5>Data Analysis</h5>
+                            <p>Proficient in analyzing and interpreting complex datasets to extract meaningful insights.
+                            </p>
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-indigo-600"></i>
-                            <span class="text-gray-700">Learn more about Computer Hardware</span>
+
+                        <div class="main-skill-item scroll-animation animate-fade-up delay-200">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h5>Machine Learning</h5>
+                            <p>Going to experience the developmentof ML models for classification, regression, and predictive
+                                analytics.</p>
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-indigo-600"></i>
-                            <span class="text-gray-700">Game</span>
+
+                        <div class="main-skill-item scroll-animation animate-fade-up delay-300">
+                            <div class="skill-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h5>Flutter</h5>
+                            <p>Learning to creating cross-platform mobile applications with Flutter and Dart.</p>
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-check-circle text-indigo-600"></i>
-                            <span class="text-gray-700">Listen to music</span>
+
+                        <div class="main-skill-item scroll-animation animate-fade-up delay-400">
+                            <div class="skill-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h5>Web Development</h5>
+                            <p>Learning in building responsive, modern websites using HTML, CSS, and JavaScript.</p>
                         </div>
                     </div>
-                    <div class="flex justify-center pt-4">
-                        <a href="#contact"
-                            class="clay-button px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-medium rounded-full hover:shadow-lg transition duration-300 flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
-                            <span>Contact Me</span>
+                </div>
+
+                <div class="additional-skills">
+                    <h4 class="scroll-animation animate-fade-up">Additional Skills</h4>
+                    <div class="additional-skills-grid">
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-100">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-150">
+                            <i class="fas fa-code"></i>
+                            <span>C language</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-200">
+                            <i class="fab fa-dart"></i>
+                            <span>Dart</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-250">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-300">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-350">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-100">
+                            <i class="fab fa-css3"></i>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-150">
+                            <i class="fas fa-table"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-200">
+                            <i class="fas fa-calculator"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-250">
+                            <i class="fas fa-cubes"></i>
+                            <span>OOP</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-300">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-350">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-200">
+                            <i class="fas fa-window-maximize"></i>
+                            <span>Tkinter</span>
+                        </div>
+                        <div class="additional-skill-item scroll-animation animate-zoom delay-250">
+                            <i class="fas fa-robot"></i>
+                            <span>Selenium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section id="github-stats" class="github-stats">
+        <div class="container">
+            <div class="section-header">
+                <h3>GitHub Statistics</h3>
+                <div class="section-line"></div>
+                <p>My open-source contributions and coding activity on GitHub</p>
+            </div>
+
+            <div class="github-content">
+                <div class="github-profile">
+                    <div class="github-profile-card">
+                        <div class="github-avatar">
+                            <img src="" alt="GitHub Avatar" id="github-avatar" loading="lazy">
+                        </div>
+                        <div class="github-profile-info">
+                            <h4 id="github-name">Loading...</h4>
+                            <p id="github-username">@username</p>
+                            <p id="github-bio">Loading bio...</p>
+                            <div class="github-stats-numbers">
+                                <div class="github-stat">
+                                    <span id="github-repos">0</span>
+                                    <span>Repositories</span>
+                                </div>
+                                <div class="github-stat">
+                                    <span id="github-followers">0</span>
+                                    <span>Followers</span>
+                                </div>
+                                <div class="github-stat">
+                                    <span id="github-following">0</span>
+                                    <span>Following</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/ayushpatil0810" target="_blank"
+                                class="btn btn-primary github-profile-link">
+                                <i class="fab fa-github"></i> Visit Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="github-contributions">
+                    <h4>Contributions</h4>
+                    <div class="contributions-wrapper">
+                        <div class="github-calendar">
+                            <!-- GitHub contribution calendar will be loaded here -->
+                            <div id="contribution-graph" class="contribution-graph-loading">
+                                <div class="loading-spinner">
+                                    <i class="fas fa-code-branch fa-spin"></i>
+                                </div>
+                                <p>Loading contribution data...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="github-repos">
+                    <h4>Featured Repositories</h4>
+                    <div class="github-repos-grid" id="github-repos-container">
+                        <!-- Repository cards will be dynamically generated here -->
+                        <div class="repo-loading">
+                            <div class="loading-spinner">
+                                <i class="fas fa-code-branch fa-spin"></i>
+                            </div>
+                            <p>Loading repositories...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-header">
+                <h3>My Certificates</h3>
+                <div class="section-line"></div>
+                <p>Credentials that validate my expertise and continuous learning journey</p>
+            </div>
+
+            <div class="certificate-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card" data-certificate-img="assets/certificates/basics_of_python.jpg">
+                    <div class="certificate-badge">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="certificate-logo">
+                        <img src="assets/images/logos/springboard.png" alt="Infosys Springboard">
+                    </div>
+                    <div class="certificate-content">
+                        <h4>Basics of Python</h4>
+                        <p class="certificate-issuer">Infosys Springboard</p>
+                        <p class="certificate-date">January 2025</p>
+                        <p class="certificate-description">Learned basics of Python.</p>
+                    </div>
+                    <div class="certificate-links">
+                        <a href="#" class="btn-small">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Improved Skills Section -->
-    <section id="skills" class="py-20 bg-gradient-to-b from-gray-50 to-indigo-50">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-4xl font-bold mb-16 text-center">My <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Skills</span>
-            </h2>
-
-            <h3 class="text-2xl font-semibold mb-8 text-indigo-600">Technical Skills</h3>
-
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
-                    <div class="h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-chart-line text-4xl text-indigo-600"></i>
+                <!-- Certificate 2 -->
+                <div class="certificate-card" data-certificate-img="assets/certificates/programming_in_c.jpg">
+                    <div class="certificate-badge">
+                        <i class="fas fa-award"></i>
                     </div>
-                    <p class="font-medium text-lg">Data Analysis</p>
-                    <p class="text-gray-500 text-sm mt-2">Data Processing & Visualization</p>
-                </div>
-
-                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
-                    <div class="h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-brain text-4xl text-indigo-600"></i>
+                    <div class="certificate-logo">
+                        <img src="assets/images/logos/springboard.png" alt="Infosys Springboard">
                     </div>
-                    <p class="font-medium text-lg">Machine Learning</p>
-                    <p class="text-gray-500 text-sm mt-2">AI & ML Models</p>
-                </div>
-
-                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
-                    <div class="h-12 flex items-center justify-center mb-4">
-                        <img src="https://storage.googleapis.com/cms-storage-bucket/4fd0db61df0567c0f352.png"
-                            alt="Flutter" class="h-10 w-auto object-contain">
+                    <div class="certificate-content">
+                        <h4>Programming in C</h4>
+                        <p class="certificate-issuer">Infosys Springboard</p>
+                        <p class="certificate-date">January 2025</p>
+                        <p class="certificate-description">Learned C Programming Language and fundamentals of
+                            programming language.</p>
                     </div>
-                    <p class="font-medium text-lg">Flutter</p>
-                    <p class="text-gray-500 text-sm mt-2">Cross-Platform Development</p>
-                </div>
-
-                <div class="clay p-6 rounded-xl bg-white text-center hover:bg-indigo-50 transition duration-300">
-                    <div class="h-12 flex items-center justify-center mb-4">
-                        <i class="fas fa-globe text-4xl text-indigo-600"></i>
-                    </div>
-                    <p class="font-medium text-lg">Web Development</p>
-                    <p class="text-gray-500 text-sm mt-2">Frontend & Backend</p>
-                </div>
-            </div>
-
-
-            <h3 class="text-2xl font-semibold mb-8 mt-16 text-indigo-600">Additional Skills</h3>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/python.svg" alt="Python" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Python</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/c.png" alt="C" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">C Language</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/dart.png" alt="Dart" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Dart</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/html5.png" alt="HTML5" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">HTML</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/css3.svg" alt="CSS" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">CSS</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/bootstrap.png" alt="Bootstrap" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Bootstrap</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/tailwind.png" alt="Tailwind" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Tailwind</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/pandas.svg" alt="Pandas" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Pandas</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/numpy.svg" alt="NumPy" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">NumPy</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <i class="fas fa-code text-2xl text-indigo-600 w-8 text-center"></i>
-                    <span class="text-gray-700 font-medium">OOP</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/github.png" alt="GitHub" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">GitHub</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/git.png" alt="Git" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Git</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/python.svg" alt="Tkinter" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Tkinter</span>
-                </div>
-
-                <div class="clay p-4 rounded-xl bg-white hover:bg-indigo-50 transition duration-300 flex items-center space-x-3">
-                    <img src="images/skills/selenium.png" alt="Selenium" class="h-8 w-8 object-contain">
-                    <span class="text-gray-700 font-medium">Selenium</span>
-                </div>
-            </div>
-
-            <div class="mt-16 flex justify-center">
-                <a href="#" class="clay-button px-8 py-3 text-indigo-600 font-semibold inline-flex items-center">
-                    <span>See my resume</span>
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-4xl font-bold mb-16 text-center">My <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Certifications</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Certification 1 -->
-                <div class="clay p-6 rounded-2xl bg-white hover:bg-indigo-50 transition-all duration-300">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <!-- <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center"> -->
-                            <img src="images/skills/python.svg" alt="Python" class="h-10 w-auto object-contain">
-                            <!-- <i class="fas fa-code text-purple-600 text-xl"></i> -->
-                            <!-- </div> -->
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Basics Of Python</h3>
-                            <p class="text-gray-600 text-sm mb-3">Infosys Springboard</p>
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="far fa-calendar-alt mr-2"></i>
-                                <span>Issued Jan 2025</span>
-                            </div>
-                            <a href="#"
-                                onclick="openCertificateModal('certificates/basics_of_python.jpg'); return false;"
-                                class="inline-flex items-center text-indigo-600 text-sm mt-3 hover:text-purple-600 transition-colors duration-300">
-                                <span>View Certificate</span>
-                                <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                        </div>
+                    <div class="certificate-links">
+                        <a href="#" class="btn-small">
+                            <i class="fas fa-external-link-alt"></i> View Certificate
+                        </a>
                     </div>
                 </div>
 
-                <!-- Certification 2 -->
-                <div class="clay p-6 rounded-2xl bg-white hover:bg-indigo-50 transition-all duration-300">
-                    <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0">
-                            <!-- <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center"> -->
-                            <img src="images/skills/c.png" alt="Python" class="h-10 w-auto object-contain">
-                            <!-- <i class="fas fa-code text-purple-600 text-xl"></i> -->
-                            <!-- </div> -->
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Programming in C</h3>
-                            <p class="text-gray-600 text-sm mb-3">Infosys Springboard</p>
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="far fa-calendar-alt mr-2"></i>
-                                <span>Issued Mar 2025</span>
-                            </div>
-                            <a href="#"
-                                onclick="openCertificateModal('certificates/programming_in_c.jpg'); return false;"
-                                class="inline-flex items-center text-indigo-600 text-sm mt-3 hover:text-purple-600 transition-colors duration-300">
-                                <span>View Certificate</span>
-                                <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gradient-to-b from-purple-50 to-indigo-50">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-4xl font-bold mb-16 text-center">My <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Projects</span>
-            </h2>
-            
-            
-            <!-- Recent projects container -->
-            <div id="recent-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project cards will be inserted here -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h3>My Projects</h3>
+                <div class="section-line"></div>
+                <p>Showcasing my best work and technical expertise across various domains</p>
             </div>
 
-            <!-- View more button -->
-            <div class="text-center mt-12">
-                <button onclick="showAllProjects()" class="clay-button px-8 py-3 text-indigo-600 font-semibold inline-flex items-center gap-2">
-                    <span>View All Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="other">Other</button>
             </div>
 
-            <!-- All projects modal -->
-            <div id="projects-modal" class="fixed inset-0 z-50 hidden">
-                <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-                <div class="relative min-h-screen md:min-h-[auto] md:h-[90vh] w-full md:max-w-6xl mx-auto mt-0 md:mt-10 bg-white rounded-none md:rounded-2xl overflow-hidden">
-                    <div class="sticky top-0 bg-white z-10 px-6 py-4 border-b flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">All Projects</h3>
-                        <button onclick="closeAllProjects()" class="clay-social w-10 h-10 flex items-center justify-center">
-                            <i class="fas fa-times"></i>
-                        </button>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="other">
+                    <div class="project-badge">
+                        <i class="fas fa-star"></i>
                     </div>
-                    <div class="p-6 overflow-y-auto max-h-[calc(90vh-80px)]">
-                        <div id="all-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <!-- All project cards will be inserted here -->
+                    <div class="project-img">
+                        <img src="assets/images/projects/pomodoro.png" alt="Pomodoro App" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h4>Pomodoro App</h4>
+                        <p class="project-type">Python</p>
+                        <p class="project-date">February 2025</p>
+                        <p class="project-description">A Pomodoro Timer app built with Python and Tkinter.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Tkinter</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Add this after the Projects section and before the Contact section -->
-    <section class="py-20 bg-white" id="blog">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-4xl font-bold mb-16 text-center">Latest <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Blogs</span>
-            </h2>
-            
-            <!-- Recent blogs container -->
-            <div id="recent-blogs" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <!-- Blog cards will be inserted here -->
-            </div>
-
-            <!-- View more button -->
-            <div class="text-center">
-                <button onclick="showAllBlogs()" id="view-more" class="clay-button px-8 py-3 text-indigo-600 font-semibold inline-flex items-center gap-2">
-                    <span>View More</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-
-            <!-- All blogs modal -->
-            <div id="blogs-modal" class="fixed inset-0 z-50 hidden">
-                <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-                <div class="relative min-h-screen md:min-h-[auto] md:h-[90vh] w-full md:max-w-6xl mx-auto mt-0 md:mt-10 bg-white rounded-none md:rounded-2xl overflow-hidden">
-                    <div class="sticky top-0 bg-white z-10 px-6 py-4 border-b flex justify-between items-center">
-                        <h3 class="text-xl font-semibold">All Blog Posts</h3>
-                        <button onclick="closeAllBlogs()" class="clay-social w-10 h-10 flex items-center justify-center">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="p-6 overflow-y-auto max-h-[calc(90vh-80px)]">
-                        <div id="all-blogs" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <!-- All blog cards will be inserted here -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section (Modified) -->
-    <section id="contact" class="py-20 bg-gradient-to-b from-purple-50 to-indigo-50">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <h2 class="text-4xl font-bold mb-16 text-center">Get in <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">Touch</span>
-            </h2>
-            <!-- <div class="clay p-8 rounded-3xl bg-white"> -->
-                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Contact Information</h3>
-                <p class="text-gray-600 mb-6">Feel free to reach out to me for any inquiries, collaborations, or just to
-                    say hello! I'm always open to discussing new projects and ideas.</p>
-                <div class="space-y-4">
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4"></i>
-                        <span>ayushppatil2006@gmail.com</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt bg-indigo-100 text-indigo-600 p-3 rounded-full mr-4"></i>
-                        <span>Pune, Maharashtra, India</span>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Follow Me</h3>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-12 h-12 flex items-center justify-center">
-                            <i class="fab fa-github text-indigo-600 text-xl"></i>
-                        </a>
-                        <a href="https://x.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-12 h-12 flex items-center justify-center">
-                            <i class="fab fa-twitter text-indigo-600 text-xl"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-12 h-12 flex items-center justify-center">
-                            <i class="fab fa-linkedin-in text-indigo-600 text-xl"></i>
-                        </a>
-                        <a href="https://instagram.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-12 h-12 flex items-center justify-center">
-                            <i class="fab fa-instagram text-indigo-600 text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            <!-- </div> -->
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 bg-gradient-to-b from-gray-900 via-indigo-900 to-purple-900 text-white">
-        <div class="container mx-auto px-6 md:px-8 lg:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                <!-- About Column -->
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="images/logo.png" alt="AP Logo" class="w-10 h-10 rounded-lg clay-social bg-white/10">
-                        <span class="text-xl font-bold text-white">Ayush Patil</span>
-                    </div>
-                    <p class="text-indigo-200 mb-4">Creating beautiful digital experiences with a focus on user-centric design and modern technologies.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
-                            <i class="fab fa-github text-white"></i>
-                        </a>
-                        <a href="https://x.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
-                            <i class="fab fa-twitter text-white"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
-                            <i class="fab fa-linkedin-in text-white"></i>
-                        </a>
-                        <a href="https://instagram.com/ayushpatil0810" target="_blank" rel="noopener" class="clay-social w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-all">
-                            <i class="fab fa-instagram text-white"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#about" class="text-indigo-200 hover:text-white transition-colors flex items-center">
-                                <i class="fas fa-chevron-right text-xs mr-2"></i>
-                                About Me
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#skills" class="text-indigo-200 hover:text-white transition-colors flex items-center">
-                                <i class="fas fa-chevron-right text-xs mr-2"></i>
-                                Skills
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#projects" class="text-indigo-200 hover:text-white transition-colors flex items-center">
-                                <i class="fas fa-chevron-right text-xs mr-2"></i>
-                                Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="text-indigo-200 hover:text-white transition-colors flex items-center">
-                                <i class="fas fa-chevron-right text-xs mr-2"></i>
-                                Contact
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#blog" class="text-indigo-200 hover:text-white transition-colors flex items-center">
-                                <i class="fas fa-chevron-right text-xs mr-2"></i>
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Info</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center text-indigo-200">
-                            <i class="fas fa-envelope w-5 mr-2"></i>
-                            ayushppatil2006@gmail.com
-                        </li>
-                        <li class="flex items-center text-indigo-200">
-                            <i class="fas fa-map-marker-alt w-5 mr-2"></i>
-                            Pune, Maharashtra, India
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
-                    <p class="text-indigo-200 mb-4">Subscribe to get latest updates and news.</p>
-                    <form class="flex flex-col space-y-3">
-                        <input type="email" placeholder="Enter your email" 
-                            class="px-4 py-2 bg-white/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 text-white placeholder-indigo-300">
-                        <button type="submit" 
-                            class="clay-button px-6 py-3 text-white font-semibold inline-flex items-center gap-2 justify-center bg-indigo-600 hover:bg-indigo-700">
-                            <span>Subscribe</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="border-t border-gray-700 my-8"></div>
-
-            <!-- Bottom Footer -->
-            <div class="flex flex-col md:flex-row justify-between items-center text-indigo-200 text-sm">
-                <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
-                <div class="flex space-x-4 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Add this before the closing body tag -->
-    <button id="go-to-top" 
-        class="fixed bottom-8 right-8 clay-social w-12 h-12 flex items-center justify-center bg-white text-indigo-600 opacity-0 invisible transition-all duration-300 hover:text-purple-600"
-        onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <div id="certificateModal" class="fixed inset-0 z-50 hidden flex items-center justify-center px-4">
-        <div class="modal-backdrop absolute inset-0 bg-black/50"></div>
-        <div class="modal-content relative w-full max-w-4xl">
-            <div class="clay p-2 rounded-3xl bg-white">
-                <button onclick="closeCertificateModal()"
-                    class="absolute top-4 right-4 clay-social w-10 h-10 flex items-center justify-center bg-white text-gray-600 hover:text-indigo-600">
-                    <i class="fas fa-times"></i>
-                </button>
-                <img id="certificateImage" src="" alt="Certificate" class="w-full h-auto rounded-2xl">
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-md');
-            } else {
-                navbar.classList.remove('shadow-md');
-            }
-        });
-
-        // Improved mobile menu toggle with animation
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-
-            if (!mobileMenu.classList.contains('hidden')) {
-                const height = mobileMenu.querySelector('.clay').offsetHeight;
-                mobileMenu.style.maxHeight = height + 16 + 'px'; // Add padding
-            } else {
-                mobileMenu.style.maxHeight = '0';
-            }
-        });
-
-        // Close mobile menu on window resize if screen becomes larger
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768) { // md breakpoint
-                const mobileMenu = document.getElementById('mobile-menu');
-                mobileMenu.classList.add('hidden');
-                mobileMenu.style.maxHeight = '0';
-            }
-        });
-
-        // Intersection Observer for scrolling animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        function openCertificateModal(imageSrc) {
-            const modal = document.getElementById('certificateModal');
-            const img = document.getElementById('certificateImage');
-            img.src = imageSrc;
-            modal.classList.remove('hidden');
-            document.body.classList.add('modal-open');
-            setTimeout(() => {
-                modal.classList.add('modal-active');
-            }, 10);
-        }
-
-        function closeCertificateModal() {
-            const modal = document.getElementById('certificateModal');
-            modal.classList.remove('modal-active');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.classList.remove('modal-open');
-            }, 300);
-        }
-
-        // Close modal on backdrop click
-        document.querySelector('.modal-backdrop').addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) {
-                closeCertificateModal();
-            }
-        });
-
-        // Close modal on ESC key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeCertificateModal();
-            }
-        });
-
-        // Single mobile menu toggle function
-        const menuButton = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = menuButton.querySelector('i');
-
-        function toggleMenu(show) {
-            if (show === undefined) {
-                mobileMenu.classList.toggle('active');
-                menuIcon.classList.toggle('fa-bars');
-                menuIcon.classList.toggle('fa-times');
-            } else {
-                mobileMenu.classList.toggle('active', show);
-                menuIcon.classList.toggle('fa-bars', !show);
-                menuIcon.classList.toggle('fa-times', show);
-            }
-        }
-
-        // Click handler for menu button
-        menuButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !menuButton.contains(e.target)) {
-                toggleMenu(false);
-            }
-        });
-
-        // Close menu when clicking links
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => toggleMenu(false));
-        });
-
-        // Close menu on resize
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-                toggleMenu(false);
-            }
-        });
-
-        // Prevent clicks inside menu from closing it
-        mobileMenu.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-
-        // Typewriter effect function
-        function typeWriter(element, text, speed = 50, delay = 0) {
-            return new Promise(resolve => {
-                let i = 0;
-                setTimeout(() => {
-                    function type() {
-                        if (i < text.length) {
-                            element.textContent += text.charAt(i);
-                            i++;
-                            setTimeout(type, speed);
-                        } else {
-                            element.classList.add('typing-complete');
-                            resolve();
-                        }
-                    }
-                    type();
-                }, delay);
-            });
-        }
-
-        // Initialize typewriter effects
-        async function initTypewriter() {
-            const titleElement = document.getElementById('title');
-            const subtitleElement = document.getElementById('subtitle');
-
-            // First text animation
-            await typeWriter(titleElement, "Hi, I'm ");
-            const nameSpan = document.createElement('span');
-            nameSpan.className = 'text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600';
-            titleElement.appendChild(nameSpan);
-            await typeWriter(nameSpan, 'Ayush Patil,');
-
-            // Second text animation with delay
-            await typeWriter(
-                subtitleElement, 
-                "Student of Artificial Intelligence & Data Science, and also exploring the world of Cross Platform Mobile App Development with Flutter.",
-                30,  // Slightly faster typing speed
-                500   // Delay before starting
-            );
-        }
-
-        // Start the typewriter effect when the page loads
-        document.addEventListener('DOMContentLoaded', initTypewriter);
-
-        // Add active class to nav links on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        function highlightNavOnScroll() {
-            const scrollY = window.pageYOffset;
-            
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector(`.nav-link[href="#${sectionId}"]`)?.classList.add('active');
-                } else {
-                    document.querySelector(`.nav-link[href="#${sectionId}"]`)?.classList.remove('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', highlightNavOnScroll);
-        window.addEventListener('load', highlightNavOnScroll);
-
-        // Blog functionality
-        function createBlogCard(blog) {
-            return `
-                <div class="clay p-6 rounded-2xl bg-white hover:bg-indigo-50 transition-all duration-300">
-                    <div class="relative mb-4 rounded-xl overflow-hidden">
-                        <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover">
-                        <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-indigo-600">
-                            ${blog.category}
-                        </span>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center text-sm text-gray-500 gap-4">
-                            <span><i class="far fa-calendar mr-1"></i> ${new Date(blog.date).toLocaleDateString()}</span>
-                            <span><i class="far fa-clock mr-1"></i> ${blog.readTime}</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800">${blog.title}</h3>
-                        <p class="text-gray-600">${blog.excerpt}</p>
-                        <a href="${blog.link}" class="inline-flex items-center text-indigo-600 hover:text-purple-600">
-                            Read More <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            `;
-        }
-
-        function initializeBlogs() {
-            const recentBlogsContainer = document.getElementById('recent-blogs');
-            // Sort blogs by date in descending order (most recent first)
-            const sortedBlogs = blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
-            const recentBlogs = sortedBlogs.slice(0, 2); // Get two most recent blogs
-            
-            recentBlogsContainer.innerHTML = recentBlogs.map(blog => createBlogCard(blog)).join('');
-        }
-
-        function showAllBlogs() {
-            const modal = document.getElementById('blogs-modal');
-            const allBlogsContainer = document.getElementById('all-blogs');
-            
-            allBlogsContainer.innerHTML = blogs.map(blog => createBlogCard(blog)).join('');
-            modal.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
-        }
-
-        function closeAllBlogs() {
-            const modal = document.getElementById('blogs-modal');
-            modal.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        // Initialize blogs when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeBlogs();
-        });
-
-        // Close modal on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeAllBlogs();
-            }
-        });
-
-        // Add this to your existing script section
-        function createProjectCard(project) {
-            return `
-                <div class="clay-card p-6 rounded-3xl bg-white">
-                    <div class="mb-4 rounded-2xl overflow-hidden">
-                        <img src="${project.image}" alt="${project.title}"
-                            class="w-full transition duration-300 hover:scale-105" />
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">${project.title}</h3>
-                    <p class="text-gray-600 mb-4">${project.description}</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        ${project.technologies.map(tech => 
-                            `<span class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full">${tech}</span>`
-                        ).join('')}
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="${project.demoLink}" class="text-indigo-600 hover:text-purple-600 transition duration-300">
-                            <i class="fas fa-eye"></i> Demo
-                        </a>
-                        <a href="${project.codeLink}" class="text-indigo-600 hover:text-purple-600 transition duration-300">
+                    <div class="project-links">
+                        <a href="https://github.com/ayushpatil0810/Projects/tree/main/Python/Tkinter-Projects/Pomodoro%20App" class="btn-small" target="_blank">
                             <i class="fab fa-github"></i> Code
                         </a>
                     </div>
                 </div>
-            `;
-        }
 
-        function initializeProjects() {
-            const recentProjectsContainer = document.getElementById('recent-projects');
-            const recentProjects = projects.slice(0, 3); // Get only the three most recent projects
-            
-            recentProjectsContainer.innerHTML = recentProjects.map(project => createProjectCard(project)).join('');
-        }
+                <!-- Project 2 -->
+                <div class="project-card" data-category="other">
+                    <div class="project-badge">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="project-img">
+                        <img src="assets/images/projects/password_manager.png" alt="Password Manager" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h4>Password Manager</h4>
+                        <p class="project-type">Python</p>
+                        <p class="project-date">February 2025</p>
+                        <p class="project-description">A mobile application that helps users track workouts, nutrition,
+                            and health metrics with personalized recommendations.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Tkinter</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayushpatil0810/Projects/tree/main/Python/Tkinter-Projects/Password%20Manager" class="btn-small" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
 
-        function showAllProjects() {
-            const modal = document.getElementById('projects-modal');
-            const allProjectsContainer = document.getElementById('all-projects');
-            
-            allProjectsContainer.innerHTML = projects.map(project => createProjectCard(project)).join('');
-            modal.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
-        }
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-badge">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="project-img">
+                        <img src="assets/images/projects/portfolio.png" alt="Portfolio Website" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h4>Portfolio Website</h4>
+                        <p class="project-type">Web Development</p>
+                        <p class="project-date">January 2025</p>
+                        <p class="project-description">A responsive personal portfolio website designed to showcase
+                            projects and skills.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#home" class="btn-small">
+                            <i class="fas fa-external-link-alt"></i> Demo
+                        </a>
+                        <a href="https://github.com/ayushpatil0810/ayushpatil0810.github.io" target="_blank"
+                            class="btn-small">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        function closeAllProjects() {
-            const modal = document.getElementById('projects-modal');
-            modal.classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
+            <div class="view-more">
+                <a href="https://github.com/ayushpatil0810/Projects" target="_blank" class="btn btn-secondary">View All
+                    Projects</a>
+            </div>
+        </div>
+    </section>
 
-        // Initialize projects when the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeProjects();
-        });
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h3>Get In Touch</h3>
+                <div class="section-line"></div>
+            </div>
 
-        // Close modal on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeAllProjects();
-            }
-        });
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:ayushppatil2006@gmail.com"><p>ayushppatil2006@gmail.com</p></a>
+                            </div>
+                        </div>
 
-        // Add this to handle the Go to Top button visibility
-        const goToTopButton = document.getElementById('go-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                goToTopButton.classList.remove('opacity-0', 'invisible');
-            } else {
-                goToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
-    </script>
-    <script src="js/blogs.js"></script>
-    <script src="js/projects.js"></script>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Pune, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/ayushpatil0810" class="social-icon" aria-label="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ayushpatil0810" class="social-icon" aria-label="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/ayushpatil0810" class="social-icon" aria-label="Twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/ayushpatil0810" class="social-icon" aria-label="Instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <a href="#home">Ayush Patil</a>
+                        <!-- <img src="Untitled.png" alt="Ayush" loading="lazy"> -->
+                    </div>
+                    <div>
+                        <p>Student & Developer</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#certificates">Certificates</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ayush. All Rights Reserved</p>
+                <p>Made with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
-</html>
-</body>
+
 </html>
