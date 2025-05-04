@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": "git-and-github-essentials",
+      "title": "Git and GitHub Essentials: Master Version Control",
+      "date": "April 20, 2025",
+      "category": "Development Tools",
+      "excerpt": "Git and GitHub Essentials: A comprehensive guide to version control and collaborative software development.",
+      "image": "../images/blogs/git-github-essentials.png",
+      "url": "./git-and-github-essentials.html",
+      "tags": ["Git", "GitHub", "Version Control", "Software Development", "Collaboration"]
+    },
+    {
+      "id": "deep-learning-vs-machine-learning",
+      "title": "Deep Learning vs Machine Learning: Key Differences Explained",
+      "date": "April 21, 2025",
+      "category": "Artificial Intelligence",
+      "excerpt": "Understanding the Differences Between Deep Learning and Machine Learning - A comprehensive guide for beginners and professionals.",
+      "image": "../images/blogs/deep-learning-vs-machine-learning.png",
+      "url": "./deep-learning-vs-machine-learning.html",
+      "tags": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Data Science", "Neural Networks"]
+    },
+    {
+      "id": "flask-vs-django-vs-fastapi",
+      "title": "Flask vs Django vs FastAPI: Choosing the Right Python Web Framework",
+      "date": "April 22, 2025",
+      "category": "Web Development",
+      "excerpt": "A comprehensive comparison of Flask vs Django vs FastAPI - Understanding which Python web framework is right for your project.",
+      "image": "../images/blogs/flask-vs-django-vs-fastapi.png",
+      "url": "./flask-vs-django-vs-fastapi.html",
+      "tags": ["Python", "Web Development", "Flask", "Django", "FastAPI", "Backend"]
+    },
+    {
+      "id": "ai-data-science-ml-roadmap",
+      "title": "The Ultimate Roadmap for AI, Data Science, and Machine Learning",
+      "date": "May 04, 2025",
+      "category": "Artificial Intelligence",
+      "excerpt": "A comprehensive guide to learning AI, Data Science, and Machine Learning - From foundations to advanced concepts with practical resources and career advice.",
+      "image": "../images/blogs/ai-data-science-ml-roadmap.png",
+      "url": "./ai-data-science-ml-roadmap.html",
+      "tags": ["Artificial Intelligence", "Data Science", "Machine Learning", "Career", "Learning Path", "Programming"]
+    }
+  ]
+}

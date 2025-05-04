@@ -1,0 +1,16 @@
+{
+  "name": "Ayush Patil Portfolio",
+  "short_name": "AP Portfolio",
+  "description": "Professional portfolio of Ayush Patil - Developer, Data Analyst, and Machine Learning Enthusiast, Flutter Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6C63FF",
+  "icons": [
+    { "src": "./images/favicons/favicon.ico", "type": "image/x-icon", "sizes": "16x16 32x32" },
+    { "src": "./images/favicons/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "./images/favicons/icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "./images/favicons/icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" },
+    { "src": "./images/favicons/icon-512-maskable.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" }
+  ]
+}

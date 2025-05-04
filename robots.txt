@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Block access to specific folders
+Disallow: /css/
+Disallow: /js/
+
+# Allow all bots to access content
+Allow: /blog/
+Allow: /images/
+Allow: /portfolio.html
+Allow: /about.html
+Allow: /contact.html
+
+# Sitemap location
+Sitemap: https://ayushpatil0810.github.io/sitemap.xml

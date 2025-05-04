@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="-vCXCGeqTPeAv9v4GeJiiwqOt346LW6nl3otstEwE0Q" />
+    <meta name="keywords"
+        content="ayushpatil0810, ayush patil, Ayush Patil, python, flutter, AI, ML, projects, portfolio">
+    <meta name="title" content="Portfolio | Ayush Patil" />
+    <meta name="author" content="Ayush Patil">
+    <meta name="description"
+        content="Explore Ayush Patil's development projects, data analysis work, and machine learning applications">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="./images/favicons/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayushpatil0810.github.io/portfolio.html" />
+    <meta property="og:title" content="Portfolio | Ayush Patil" />
+    <meta property="og:description" content="Explore Ayush Patil's development projects, data analysis work, and machine learning applications" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/assets/images/link-preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ayushpatil0810.github.io/portfolio.html" />
+    <meta property="twitter:title" content="Portfolio | Ayush Patil" />
+    <meta property="twitter:description" content="Explore Ayush Patil's development projects, data analysis work, and machine learning applications" />
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/assets/images/link-preview.png" />
+        
+    <title>Portfolio | Ayush Patil</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/glow-effect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Ayush Patil</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>My Portfolio</h1>
+                <p>A showcase of my projects and technical capabilities</p>
+            </div>
+        </section>
+
+        <section class="portfolio-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="container">
+                <div class="projects-container">
+                    <!-- Project 1 -->
+                    <div class="project-item" id="project1" data-category="python">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./images/pomodoro.png" alt="Pomodoro App">
+                                <div class="project-links">
+                                    <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank"
+                                        aria-label="View Code on GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank"
+                                        aria-label="View Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Password Manager App</h3>
+                                <p>A secure password management application built with Python and Tkinter that allows
+                                    users to store, generate, and retrieve website credentials.</p>
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>Tkinter</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python"
+                                        class="btn small">View Demo</a>
+                                    <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python">
+                                        <button class="btn small case-study-btn" data-project="project1">GitHub <i
+                                                class="fab fa-github"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-item" data-category="python">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./images/password_manager.png" alt="Password Mana App">
+                                <div class="project-links">
+                                    <a href="https://github.com/" target="_blank" aria-label="View Code on GitHub"><i
+                                            class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" aria-label="View Live Demo"><i
+                                            class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Password Manager App</h3>
+                                <p>A secure password management application built with Python and Tkinter that allows
+                                    users to store, generate, and retrieve website credentials.</p>
+                                <div class="project-tags">
+                                    <span>Python</span>
+                                    <span>Tkinter</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="#" class="btn small">View Demo</a>
+                                    <button class="btn small case-study-btn" data-project="project2">GitHub <i
+                                            class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more projects with similar structure -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Ayush Patil</h3>
+                    <p>AI & Flutter Developer | Passionate Problem Solver</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/ayushpatil0810" target="_blank" aria-label="GitHub Profile"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" aria-label="LinkedIn Profile"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/ayushpatil0810" target="_blank" aria-label="Twitter Profile"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/ayushpatil0810" target="_blank" aria-label="Twitter Profile"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/dark-mode.js"></script>
+    <script src="./js/portfolio.js"></script>
+</body>
+
+</html>

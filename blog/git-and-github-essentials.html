@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Git and GitHub Essentials: A comprehensive guide to version control and collaborative software development">
+    <title>Git and GitHub Essentials: Master Version Control | Ayush Patil</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="../images/favicons/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .post-header {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .post-header h1 {
+            font-size: 2.5rem;
+            max-width: 800px;
+            margin: 0 auto 1rem;
+        }
+        
+        .post-meta-full {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+        
+        .post-meta-full .author {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .post-meta-full .author img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .post-featured-image {
+            max-height: 500px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .post-featured-image img {
+            width: auto;
+            max-width: 100%;
+            max-height: 450px;
+            object-fit: contain;
+        }
+        
+        .post-content-full {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .post-content-full p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .post-content-full h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .post-content-full h3 {
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .post-content-full ul, .post-content-full ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .post-content-full li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .post-content-full code {
+            background-color: var(--card-bg);
+            padding: 0.2rem 0.4rem;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+        }
+        
+        .post-content-full pre {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        .post-content-full pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 3rem 0;
+        }
+        
+        .post-tag {
+            background-color: rgba(74, 108, 247, 0.1);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        .author-bio {
+            display: flex;
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin: 3rem 0;
+        }
+        
+        .author-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1.5rem;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .related-posts {
+            margin: 4rem 0;
+        }
+        
+        .related-posts h2 {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .related-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .comparison-table th {
+            background-color: var(--card-bg);
+            text-align: left;
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .command-block {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-code);
+            overflow-x: auto;
+        }
+        
+        @media (max-width: 992px) {
+            .related-posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .post-header h1 {
+                font-size: 2rem;
+            }
+            
+            .post-meta-full {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .author-image {
+                margin: 0 auto 1.5rem;
+            }
+            
+            .related-posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Ayush Patil</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../about.html">About Me</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article data-post-id="git-and-github-essentials">
+            <div class="post-header">
+                <div class="container">
+                    <h1>Git and GitHub Essentials: Master Version Control</h1>
+                    <div class="post-meta-full">
+                        <div class="author">
+                            <img src="../images/profile.jpg" alt="Ayush Patil">
+                            <span>Ayush Patil</span>
+                        </div>
+                        <div class="date">April 20, 2025</div>
+                        <div class="category">Development Tools</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-featured-image">
+                <img src="../images/blogs/git-github-essentials.png" alt="Git and GitHub illustration with version control components">
+            </div>
+
+            <div class="post-content-full">
+                <p>Version control is the backbone of modern software development, enabling teams to collaborate efficiently while maintaining code quality. Git and GitHub have emerged as the dominant tools in this space, revolutionizing how developers build software together. Whether you're a beginner or looking to sharpen your skills, this comprehensive guide will walk you through everything you need to know about Git and GitHub.</p>
+
+                <h2>What is Git?</h2>
+                <p>Git is a distributed version control system created by Linus Torvalds in 2005. Unlike centralized version control systems, Git gives every developer a complete copy of the repository, including its full history. This distributed nature allows for greater flexibility, better performance, and the ability to work offline.</p>
+
+                <p>Some key features that make Git powerful include:</p>
+
+                <ul>
+                    <li><strong>Branching and Merging:</strong> Create separate branches for features or experiments, then merge them back when ready</li>
+                    <li><strong>Speed:</strong> Operations are performed locally, making most commands lightning-fast</li>
+                    <li><strong>Data Integrity:</strong> Git uses checksums to ensure content integrity</li>
+                    <li><strong>Staging Area:</strong> A unique intermediate area that gives you fine control over what gets committed</li>
+                </ul>
+
+                <h2>What is GitHub?</h2>
+                <p>GitHub is a web-based hosting service for Git repositories that adds collaboration features like pull requests, issues, project boards, and more. While Git is the version control system itself, GitHub provides a platform that makes it easier for developers to work together on projects.</p>
+
+                <p>GitHub has become the world's largest community of developers, hosting millions of public repositories. It's now owned by Microsoft and continues to evolve with new features for code hosting, continuous integration, and project management.</p>
+
+                <h2>Git Basics: Essential Commands</h2>
+
+                <h3>Setting Up Git</h3>
+                <p>Before you start using Git, you need to configure your identity:</p>
+
+                <div class="command-block">
+                    git config --global user.name "Your Name"<br>
+                    git config --global user.email "your.email@example.com"
+                </div>
+
+                <h3>Creating and Cloning Repositories</h3>
+
+                <p>To initialize a new Git repository in your project directory:</p>
+                <div class="command-block">
+                    git init
+                </div>
+
+                <p>To clone an existing repository from GitHub:</p>
+                <div class="command-block">
+                    git clone https://github.com/username/repository.git
+                </div>
+
+                <h3>Basic Workflow Commands</h3>
+
+                <p>Check the status of your working directory:</p>
+                <div class="command-block">
+                    git status
+                </div>
+
+                <p>Add files to the staging area:</p>
+                <div class="command-block">
+                    git add filename    # Add specific file<br>
+                    git add .          # Add all files
+                </div>
+
+                <p>Commit your changes with a meaningful message:</p>
+                <div class="command-block">
+                    git commit -m "Add feature X"
+                </div>
+
+                <p>Push your commits to GitHub:</p>
+                <div class="command-block">
+                    git push origin main
+                </div>
+
+                <p>Pull changes from GitHub:</p>
+                <div class="command-block">
+                    git pull origin main
+                </div>
+
+                <h2>Branching and Merging</h2>
+
+                <p>Branching is one of Git's most powerful features. It allows you to diverge from the main development line to work on features or fixes without affecting the main codebase.</p>
+
+                <h3>Working with Branches</h3>
+
+                <p>Create a new branch:</p>
+                <div class="command-block">
+                    git branch feature-name
+                </div>
+
+                <p>Switch to a branch:</p>
+                <div class="command-block">
+                    git checkout feature-name
+                </div>
+
+                <p>Create and switch to a new branch in one command:</p>
+                <div class="command-block">
+                    git checkout -b feature-name
+                </div>
+
+                <p>Merge a branch back into main:</p>
+                <div class="command-block">
+                    git checkout main<br>
+                    git merge feature-name
+                </div>
+
+                <h3>Branching Strategies</h3>
+                <p>Several effective branching strategies have emerged to help teams work together smoothly:</p>
+
+                <ul>
+                    <li><strong>Git Flow:</strong> A strict branching model with dedicated branches for features, releases, and hotfixes</li>
+                    <li><strong>GitHub Flow:</strong> A simpler approach where features are developed in branches and merged to main after review</li>
+                    <li><strong>Trunk-Based Development:</strong> Developers work on short-lived feature branches and integrate frequently to the main branch</li>
+                </ul>
+
+                <h2>GitHub Collaboration Features</h2>
+
+                <h3>Pull Requests</h3>
+                <p>Pull requests are GitHub's way of proposing changes to a repository. They provide a mechanism for code review and discussion before changes are merged into the main codebase. To create a pull request:</p>
+
+                <ol>
+                    <li>Push your branch to GitHub</li>
+                    <li>Navigate to the repository on GitHub</li>
+                    <li>Click "New pull request"</li>
+                    <li>Select the base branch and compare branch</li>
+                    <li>Add a title and description</li>
+                    <li>Click "Create pull request"</li>
+                </ol>
+
+                <h3>Issues</h3>
+                <p>GitHub Issues help track tasks, enhancements, and bugs for your projects. They're a great way to organize work and create a roadmap for your project. Each issue can be assigned to team members, labeled for categorization, and linked to pull requests.</p>
+
+                <h3>GitHub Actions</h3>
+                <p>GitHub Actions allow you to automate your software development workflows directly in your GitHub repository. You can set up workflows to automatically build, test, and deploy your code whenever you push changes or create pull requests.</p>
+
+                <h2>Advanced Git Techniques</h2>
+
+                <h3>Rebasing</h3>
+                <p>Rebasing is an alternative to merging that rewrites the commit history to create a cleaner, linear sequence of commits:</p>
+                <div class="command-block">
+                    git checkout feature-branch<br>
+                    git rebase main
+                </div>
+
+                <p>While powerful, rebasing should be used with caution, especially with shared branches, as it rewrites commit history.</p>
+
+                <h3>Interactive Rebasing</h3>
+                <p>Interactive rebasing allows you to modify commits in various ways:</p>
+                <div class="command-block">
+                    git rebase -i HEAD~3    # Interactive rebase of the last 3 commits
+                </div>
+
+                <p>This opens an editor where you can pick, squash, edit, or reorder commits.</p>
+
+                <h3>Stashing Changes</h3>
+                <p>Stashing allows you to temporarily store modified files without committing them:</p>
+                <div class="command-block">
+                    git stash                 # Stash changes<br>
+                    git stash list            # List stashes<br>
+                    git stash apply           # Apply the most recent stash<br>
+                    git stash pop             # Apply and remove the most recent stash
+                </div>
+
+                <h3>Git Hooks</h3>
+                <p>Git hooks are scripts that Git executes before or after events like commit, push, or receive. They allow you to customize Git's behavior and enforce quality standards in your workflow. Common uses include:</p>
+
+                <ul>
+                    <li>Running linters or tests before commits</li>
+                    <li>Enforcing commit message formats</li>
+                    <li>Triggering deployment scripts after successful pushes</li>
+                </ul>
+
+                <h2>Best Practices for Git and GitHub</h2>
+
+                <h3>Commit Messages</h3>
+                <p>Write clear, concise commit messages that explain <em>what</em> was changed and <em>why</em>. A good format is:</p>
+
+                <div class="command-block">
+                    Short summary (50 chars or less)<br><br>
+                    More detailed explanation if necessary. Wrap it to about 72<br>
+                    characters or so. The blank line separating the summary from<br>
+                    the body is critical.
+                </div>
+
+                <h3>GitIgnore Files</h3>
+                <p>Use .gitignore files to exclude files that shouldn't be tracked by Git, such as:</p>
+                <ul>
+                    <li>Compiled code and binaries</li>
+                    <li>Dependency directories (like node_modules)</li>
+                    <li>Environment configuration files with secrets</li>
+                    <li>Log files and databases</li>
+                    <li>System files (.DS_Store, Thumbs.db)</li>
+                </ul>
+
+                <h3>Security Considerations</h3>
+                <p>To keep your GitHub projects secure:</p>
+
+                <ul>
+                    <li>Never commit sensitive information like API keys or passwords</li>
+                    <li>Use environment variables or secure vaults for secrets</li>
+                    <li>Enable two-factor authentication for your GitHub account</li>
+                    <li>Regularly review repository access permissions</li>
+                    <li>Consider using GitHub's security features like Dependabot</li>
+                </ul>
+
+                <h2>Git Beyond Code: Other Use Cases</h2>
+
+                <p>While Git and GitHub are primarily associated with software development, they can be effective for other use cases:</p>
+
+                <ul>
+                    <li><strong>Writing and Documentation:</strong> Track changes to articles, books, or documentation</li>
+                    <li><strong>Design Assets:</strong> Version control for design files and assets</li>
+                    <li><strong>Data Science:</strong> Track changes to datasets and notebooks</li>
+                    <li><strong>Legal Documents:</strong> Track changes to contracts and legal documents</li>
+                    <li><strong>Configuration Management:</strong> Version control for system configurations</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+                <p>Git and GitHub have fundamentally changed how software is built, enabling collaboration at an unprecedented scale. Whether you're a solo developer or part of a large team, mastering these tools will make you more efficient and effective.</p>
+
+                <p>Start with the basics, practice regularly, and gradually incorporate more advanced techniques into your workflow. The investment in learning Git and GitHub pays off quickly in improved productivity and collaboration capabilities.</p>
+
+                <p>As you continue your journey with Git and GitHub, remember that the community is vast and supportive. Don't hesitate to explore the extensive documentation, participate in forums, and contribute to open-source projects to further hone your skills.</p>
+
+                <div class="post-tags">
+                    <span class="post-tag">Git</span>
+                    <span class="post-tag">GitHub</span>
+                    <span class="post-tag">Version Control</span>
+                    <span class="post-tag">Software Development</span>
+                    <span class="post-tag">Collaboration</span>
+                </div>
+
+                <div class="author-bio">
+                    <div class="author-image">
+                        <img src="../images/profile.jpg" alt="Ayush Patil">
+                    </div>
+                    <div class="author-info">
+                        <h3>Ayush Patil</h3>
+                        <p>AI enthusiast and cross-platform app developer, driven by curiosity and creativity. I specialize in Python, Flutter, and machine learning, always eager to build impactful, intelligent solutions and grow through collaboration.</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="related-posts">
+                <div class="container">
+                    <h2>Related Posts</h2>
+                    <div class="related-posts-grid">
+                        <!-- Related posts will be dynamically inserted here -->
+                        <div class="loading-spinner">Loading related posts...</div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Ayush Patil</h3>
+                    <p>AI & Flutter Developer | Passionate Problem Solver</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/ayushpatil0810" target="_blank" aria-label="GitHub Profile"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" aria-label="LinkedIn Profile"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/ayushpatil0810" target="_blank" aria-label="Twitter Profile"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/ayushpatil0810" target="_blank" aria-label="Twitter Profile"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/related-posts.js"></script>
+</body>
+</html>

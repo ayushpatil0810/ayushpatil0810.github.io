@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="-vCXCGeqTPeAv9v4GeJiiwqOt346LW6nl3otstEwE0Q" />
+    <meta name="keywords"
+        content="ayushpatil0810, ayush patil, Ayush Patil, blog, programming, AI, machine learning, data science">
+    <meta name="title" content="Blog | Ayush Patil" />
+    <meta name="author" content="Ayush Patil">
+    <meta name="description" content="Developer insights, coding tips, and tech trends by Ayush Patil">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="./images/favicons/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayushpatil0810.github.io/blog.html" />
+    <meta property="og:title" content="Blog | Ayush Patil" />
+    <meta property="og:description" content="Developer insights, coding tips, and tech trends by Ayush Patil" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/assets/images/link-preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ayushpatil0810.github.io/blog.html" />
+    <meta property="twitter:title" content="Blog | Ayush Patil" />
+    <meta property="twitter:description" content="Developer insights, coding tips, and tech trends by Ayush Patil" />
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/assets/images/link-preview.png" />
+        
+    <title>Blog | Ayush Patil</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/glow-effect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Ayush Patil</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Developer Insights</h1>
+                <p>Thoughts, tutorials, and trends in web development</p>
+            </div>
+        </section>
+
+        <section class="blog-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Posts</button>
+                    <button class="filter-btn" data-filter="ai">A.I.</button>
+                    <button class="filter-btn" data-filter="dev-tools">Developer Tools</button>
+                    <button class="filter-btn" data-filter="trends">Tech Trends</button>
+                    <button class="filter-btn" data-filter="web-dev">Web Development</button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="blog-search" placeholder="Search articles...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-grid">
+            <div class="container">
+                <div class="blog-posts">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-post" data-categories="dev-tools">
+                        <div class="post-image">
+                            <img src="./images/blogs/git-github-essentials.png" alt="Git and GitHub Essentials">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">April 20, 2025</span>
+                                <span class="post-category">Dev Tools</span>
+                            </div>
+                            <h2>Git and GitHub Essentials: Master Version Control | Ayush Patil</h2>
+                            <p class="post-excerpt">
+                                Git and GitHub Essentials: A comprehensive guide to version control and collaborative software development.
+                            </p>
+                            <a href="./blog/git-and-github-essentials.html" class="btn small">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="blog-post" data-categories="ai">
+                        <div class="post-image">
+                            <img src="./images/blogs/deep-learning-vs-machine-learning.png" alt="Deep Learning vs Machine Learning">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">April 21, 2025</span>
+                                <span class="post-category">A.I.</span>
+                            </div>
+                            <h2>Deep Learning vs Machine Learning: Key Differences Explained | Ayush Patil</h2>
+                            <p class="post-excerpt">
+                                Understanding the Differences Between Deep Learning and Machine Learning - A comprehensive guide for beginners and professionals.
+                            </p>
+                            <a href="./blog/deep-learning-vs-machine-learning.html" class="btn small">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="blog-post" data-categories="web-dev">
+                        <div class="post-image">
+                            <img src="./images/blogs/flask-vs-django-vs-fastapi.png" alt="Web Development Trends">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">April 22, 2025</span>
+                                <span class="post-category">Tech Trends</span>
+                            </div>
+                            <h2>Flask vs Django vs FastAPI: Choosing the Right Python Web Framework</h2>
+                            <p class="post-excerpt">
+                                A comprehensive comparison of Flask vs Django vs FastAPI - Understanding which Python web framework is right for your project.
+                            </p>
+                            <a href="./blog/flask-vs-django-vs-fastapi.html" class="btn small">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 4 -->
+                    <article class="blog-post" data-categories="ai">
+                        <div class="post-image">
+                            <img src="./images/blogs/ai-data-science-ml-roadmap.png" alt="AI Data Science ML Roadmap">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-date">May 04, 2025</span>
+                                <span class="post-category">A.I.</span>
+                            </div>
+                            <h2>The Ultimate Roadmap for AI, Data Science, and Machine Learning</h2>
+                            <p class="post-excerpt">
+                                A comprehensive guide to learning AI, Data Science, and Machine Learning - From foundations to advanced concepts with practical resources and career advice.
+                            </p>
+                            <a href="./blog/ai-data-science-ml-roadmap.html" class="btn small">Read More</a>
+                        </div>
+                    </article>
+                    
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Subscribe to My Newsletter</h2>
+                    <p>Get the latest articles, tutorials, and updates delivered straight to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Ayush Patil</h3>
+                    <p>AI & Flutter Developer | Passionate Problem Solver</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/ayushpatil0810" target="_blank" aria-label="GitHub Profile"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" aria-label="LinkedIn Profile"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/ayushpatil0810" target="_blank" aria-label="Twitter Profile"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/ayushpatil0810" target="_blank" aria-label="Twitter Profile"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Ayush Patil. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/dark-mode.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/blog.js"></script>
+</body>
+</html>
