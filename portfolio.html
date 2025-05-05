@@ -41,6 +41,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/glow-effect.css">
+    <link rel="stylesheet" href="./css/project-card.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -48,11 +49,11 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html">Ayush Patil</a>
+                <a href="/">Ayush Patil</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="portfolio.html" class="active">Portfolio</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -82,10 +83,11 @@
             <div class="container">
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="flutter">Flutter</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
                     <button class="filter-btn" data-filter="frontend">Frontend</button>
                     <button class="filter-btn" data-filter="backend">Backend</button>
                     <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-                    <button class="filter-btn" data-filter="python">Python</button>
                 </div>
             </div>
         </section>
@@ -94,10 +96,40 @@
             <div class="container">
                 <div class="projects-container">
                     <!-- Project 1 -->
+
+                    <div class="project-item" data-category="flutter">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="./images/projects/roll_and_go.png" alt="Roll & Go App">
+                                <div class="project-links">
+                                    <a href="https://github.com/ayushpatil0810/dice_and_roll_flutter_app" target="_blank"
+                                        aria-label="View Code on GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://github.com/ayushpatil0810/dice_and_roll_flutter_app" target="_blank"
+                                        aria-label="View Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Roll & Go</h3>
+                                <p>A simple dice rolling Flutter application that allows users to roll a pair of virtual dice with a tap.</p>
+                                <div class="project-tags">
+                                    <span>Flutter</span>
+                                    <span>Dart</span>
+                                    <span>Mobile App</span>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="https://github.com/ayushpatil0810/dice_and_roll_flutter_app" class="btn small">View Demo</a>
+                                    <a href="https://github.com/ayushpatil0810/dice_and_roll_flutter_app">
+                                        <button class="btn small case-study-btn" data-project="project-flutter">GitHub <i class="fa-brands fa-github"></i></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="project-item" id="project1" data-category="python">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="./images/pomodoro.png" alt="Pomodoro App">
+                                <img src="./images/projects/pomodoro.png" alt="Pomodoro App">
                                 <div class="project-links">
                                     <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank"
                                         aria-label="View Code on GitHub"><i class="fab fa-github"></i></a>
@@ -114,22 +146,19 @@
                                     <span>Tkinter</span>
                                 </div>
                                 <div class="project-actions">
-                                    <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python"
-                                        class="btn small">View Demo</a>
+                                    <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" class="btn small">View Demo</a>
                                     <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python">
-                                        <button class="btn small case-study-btn" data-project="project1">GitHub <i
-                                                class="fab fa-github"></i></button>
+                                        <button class="btn small case-study-btn" data-project="project1">GitHub <i class="fa-brands fa-github"></i></button>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
                     <div class="project-item" data-category="python">
                         <div class="project-card">
                             <div class="project-image">
-                                <img src="./images/password_manager.png" alt="Password Mana App">
+                                <img src="./images/projects/password_manager.png" alt="Password Mana App">
                                 <div class="project-links">
                                     <a href="https://github.com/" target="_blank" aria-label="View Code on GitHub"><i
                                             class="fab fa-github"></i></a>
@@ -147,8 +176,7 @@
                                 </div>
                                 <div class="project-actions">
                                     <a href="#" class="btn small">View Demo</a>
-                                    <button class="btn small case-study-btn" data-project="project2">GitHub <i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                                    <button class="btn small case-study-btn" data-project="project2">GitHub <i class="fa-brands fa-github"></i></button>
                                 </div>
                             </div>
                         </div>

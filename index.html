@@ -15,12 +15,13 @@
     <!-- Favicon -->
     <link rel="icon" href="./images/favicons/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="./images/favicons/apple-touch-icon.png">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ayushpatil0810.github.io/" />
     <meta property="og:title" content="Ayush Patil | Developer Portfolio" />
-    <meta property="og:description" content="Professional portfolio of Ayush Patil - Developer, Data Analyst, and Machine Learning Enthusiast" />
+    <meta property="og:description"
+        content="Professional Portfolio of Ayush Patil - Developer, Data Analyst, and Machine Learning Enthusiast" />
     <meta property="og:image"
         content="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/images/link-preview.png" />
 
@@ -28,10 +29,11 @@
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ayushpatil0810.github.io/" />
     <meta property="twitter:title" content="Ayush Patil | Developer Portfolio" />
-    <meta property="twitter:description" content="Professional portfolio of Ayush Patil - Developer, Data Analyst, and Machine Learning Enthusiast" />
+    <meta property="twitter:description"
+        content="Professional portfolio of Ayush Patil - Developer, Data Analyst, and Machine Learning Enthusiast" />
     <meta property="twitter:image"
         content="https://raw.githubusercontent.com/ayushpatil0810/ayushpatil0810.github.io/refs/heads/main/images/link-preview.png" />
-        
+
     <title>Ayush Patil | Developer Portfolio</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,8 +41,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;700&family=Syne:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="preload" href="./css/style.css" as="style">
+    <link rel="preload" href="./css/glow-effect.css" as="style">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/glow-effect.css">
+    <link rel="stylesheet" href="./css/project-card.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -48,11 +53,11 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index.html">Ayush Patil</a>
+                <a href="/">Ayush Patil</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="/" class="active">Home</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -87,8 +92,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="./images/profile.jpg" alt="Ayush Patil"
-                        class="profile-image">
+                    <img src="./images/profile.jpg" alt="Ayush Patil" class="profile-image">
                 </div>
             </div>
         </section>
@@ -148,14 +152,45 @@
             <div class="container">
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
+
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="./images/pomodoro.png" alt="Pomodoro App">
+                            <img src="./images/projects/roll_and_go.png" alt="Pomodoro App">
                             <div class="project-links">
-                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank" aria-label="View Code on GitHub"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank" aria-label="View Live Demo"><i
-                                        class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank"
+                                    aria-label="View Code on GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank"
+                                    aria-label="View Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Roll & Go</h3>
+                            <p>A simple dice rolling Flutter application that allows users to roll a pair of virtual
+                                dice with a tap.</p>
+                            <div class="project-tags">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>Mobile App</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ayushpatil0810/dice_and_roll_flutter_app"
+                                    class="btn small">View Demo</a>
+                                <a href="https://github.com/ayushpatil0810/dice_and_roll_flutter_app">
+                                    <button class="btn small case-study-btn" data-project="project1">GitHub <i
+                                            class="fa-brands fa-github"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./images/projects/pomodoro.png" alt="Pomodoro App">
+                            <div class="project-links">
+                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank"
+                                    aria-label="View Code on GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" target="_blank"
+                                    aria-label="View Live Demo"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                         <div class="project-info">
@@ -167,39 +202,38 @@
                                 <span>Tkinter</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" class="btn small">View Demo</a>
+                                <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python" class="btn small">View
+                                    Demo</a>
                                 <a href="https://github.com/ayushpatil0810/Pomodoro-App-Python">
-                                <button class="btn small case-study-btn" data-project="project1">GitHub <i
-                                        class="fa-brands fa-github"></i></button>
+                                    <button class="btn small case-study-btn" data-project="project1">GitHub <i
+                                            class="fa-brands fa-github"></i></button>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-item" data-category="fullstack">
-                        <div class="project-card">
-                            <div class="project-image">
-                                <img src="./images/password_manager.png" alt="Password Mana App">
-                                <div class="project-links">
-                                    <a href="https://github.com/" target="_blank" aria-label="View Code on GitHub"><i
-                                            class="fab fa-github"></i></a>
-                                    <a href="#" target="_blank" aria-label="View Live Demo"><i
-                                            class="fas fa-external-link-alt"></i></a>
-                                </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./images/projects/password_manager.png" alt="Password Mana App">
+                            <div class="project-links">
+                                <a href="https://github.com/" target="_blank" aria-label="View Code on GitHub"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" aria-label="View Live Demo"><i
+                                        class="fas fa-external-link-alt"></i></a>
                             </div>
-                            <div class="project-info">
-                                <h3>Password Manager App</h3>
-                                <p>A secure password management application built with Python and Tkinter that allows
-                                    users to store, generate, and retrieve website credentials.</p>
-                                <div class="project-tags">
-                                    <span>Python</span>
-                                    <span>Tkinter</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a href="#" class="btn small">View Demo</a>
-                                    <button class="btn small case-study-btn" data-project="project2">GitHub <i
-                                            class="fa-brands fa-github"></i></button>
-                                </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Password Manager App</h3>
+                            <p>A secure password management application built with Python and Tkinter that allows
+                                users to store, generate, and retrieve website credentials.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Tkinter</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="btn small">View Demo</a>
+                                <button class="btn small case-study-btn" data-project="project2">GitHub <i
+                                        class="fa-brands fa-github"></i></button>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,24 @@
+/* Project Card Styling */
+.project-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Make buttons evenly sized */
+.project-actions .btn {
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Add to your project-card.css file */
+.project-item {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.project-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    position: absolute;
+}

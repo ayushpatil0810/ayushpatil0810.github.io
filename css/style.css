@@ -1488,3 +1488,75 @@ footer {
     top: 0;
     left: 0;
 }
+
+/* Add this to your existing CSS file */
+
+/* Keep the general centered-cards class for the education section */
+.centered-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered-cards .card {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Special styling for certification cards */
+.certifications .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certifications .card {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* For smaller screens, stack the certification cards */
+@media (max-width: 900px) {
+    .certifications .cards-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* For larger screens, maintain the grid but center the content */
+@media (min-width: 768px) {
+    .centered-cards.cards-grid {
+        justify-content: center;
+    }
+}
+
+/* Certificate cards layout - side by side and centered */
+.certificates-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certificates-grid .card {
+    flex: 1 1 400px;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+/* For smaller screens */
+@media (max-width: 900px) {
+    .certificates-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .certificates-grid .card {
+        width: 100%;
+        max-width: 600px;
+    }
+}
