@@ -3,31 +3,31 @@
   <!-- Main pages -->
   <url>
     <loc>https://ayushpatil0810.github.io/</loc>
-    <lastmod>2024-05-01</lastmod>
+    <lastmod>2025-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ayushpatil0810.github.io/portfolio.html</loc>
-    <lastmod>2024-05-01</lastmod>
+    <lastmod>2025-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ayushpatil0810.github.io/about.html</loc>
-    <lastmod>2024-05-01</lastmod>
+    <lastmod>2025-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ayushpatil0810.github.io/blog.html</loc>
-    <lastmod>2024-05-01</lastmod>
+    <lastmod>2025-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ayushpatil0810.github.io/contact.html</loc>
-    <lastmod>2024-05-01</lastmod>
+    <lastmod>2025-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -35,26 +35,34 @@
   <!-- Blog posts -->
   <url>
     <loc>https://ayushpatil0810.github.io/blog/git-and-github-essentials.html</loc>
-    <lastmod>2024-04-20</lastmod>
+    <lastmod>2025-04-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ayushpatil0810.github.io/blog/deep-learning-vs-machine-learning.html</loc>
-    <lastmod>2024-04-21</lastmod>
+    <lastmod>2025-04-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ayushpatil0810.github.io/blog/flask-vs-django-vs-fastapi.html</loc>
-    <lastmod>2024-04-22</lastmod>
+    <lastmod>2025-04-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ayushpatil0810.github.io/blog/ai-data-science-ml-roadmap.html</loc>
-    <lastmod>2024-05-04</lastmod>
+    <lastmod>2025-05-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+  
+  <!-- Error page -->
+  <url>
+    <loc>https://ayushpatil0810.github.io/404.html</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
 </urlset>
