@@ -214,6 +214,31 @@ body {
     color: var(--text-gray);
 }
 
+/* CV Download Button */
+.cv-download {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cv-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
 .social-links {
     display: flex;
     gap: 1rem;
@@ -258,9 +283,11 @@ body {
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .contact-section {
     margin-bottom: 0rem;
 }
+
 .section-title {
     font-size: 2rem;
     font-weight: 600;
@@ -618,29 +645,29 @@ body {
     .container {
         flex-direction: column;
     }
-    
+
     .sidebar-container {
         width: calc(100% - 4rem);
         margin: 2rem 2rem 0rem 2rem;
         gap: 2rem;
     }
-    
+
     .sidebar {
         width: 100%;
         padding: 2rem;
     }
-    
+
     .profile {
         margin-bottom: 2rem;
     }
-    
+
     .contact-info {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1rem;
         margin-bottom: 2rem;
     }
-    
+
     .main-content {
         padding: 2rem;
     }
@@ -656,43 +683,47 @@ body {
         width: calc(100% - 3rem);
         margin: 1.5rem 1.5rem 0rem 1.5rem;
     }
-    
+
     .profile-image {
         width: 100px;
         height: 100px;
     }
-    
+
     .name {
         font-size: 1.5rem;
     }
-    
+
     .section-title {
         font-size: 1.5rem;
-    }    
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .certifications-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-info {
         grid-template-columns: 1fr;
     }
-    
+
     .social-links {
         gap: 0.5rem;
     }
-      .social-link {
+
+    .social-link {
         width: 40px;
         height: 40px;
         font-size: 1rem;
-    }    .form-group {
+    }
+
+    .form-group {
         flex-direction: column;
     }
 
@@ -712,15 +743,15 @@ body {
         width: calc(100% - 2rem);
         margin: 1rem 1rem 0rem 1rem;
     }
-    
+
     .sidebar {
         padding: 1rem;
     }
-    
+
     .main-content {
         padding: 1rem;
-    }    
-    
+    }
+
     .about-section,
     .skills-section,
     .languages-section,
