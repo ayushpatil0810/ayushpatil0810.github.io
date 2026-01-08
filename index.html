@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ayush Patil — Full Stack Developer specializing in AI & ML, building intelligent full-stack applications.">
+    <meta name="keywords"
+        content="Full Stack Developer, AI, ML, MERN Stack, Python, React, Node.js, Machine Learning, Pune">
+    <meta name="author" content="Ayush Patil">
+    <meta property="og:title" content="Ayush Patil — Full Stack Developer | AI & ML">
+    <meta property="og:description"
+        content="Full Stack Developer specializing in AI & ML, building intelligent applications.">
+    <meta property="og:image" content="./images/avatar.jpg">
+    <meta property="og:url" content="https://ayushpatil0810.github.io">
+    <title>Ayush Patil — Full Stack Developer | AI & ML</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Ayush<span class="accent">.</span></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Let's Talk</a></li>
+                </ul>
+
+                <button class="nav__close" id="nav-close" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav__buttons">
+                <a href="https://github.com/ayushpatil0810" target="_blank" rel="noopener" class="nav__social"
+                    aria-label="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" rel="noopener" class="nav__social"
+                    aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://x.com/ayushpatil0810" target="_blank" rel="noopener" class="nav__social"
+                    aria-label="X / Twitter">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+
+                <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <p class="hero__label">Full Stack Developer | AI & ML</p>
+                    <h1 class="hero__title">
+                        Ayush<br>
+                        Patil<span class="accent">.</span>
+                    </h1>
+                    <p class="hero__tagline">
+                        Building intelligent full-stack
+                        applications powered by AI.
+                    </p>
+                </div>
+
+                <div class="hero__scroll">
+                    <span class="hero__scroll-text">Scroll</span>
+                    <div class="hero__scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <header class="section__header">
+                    <span class="section__number">01</span>
+                    <h2 class="section__title">About</h2>
+                </header>
+
+                <div class="about__content">
+                    <div class="about__image-wrapper reveal">
+                        <img src="./images/avatar.jpg" alt="Ayush Patil" class="about__image">
+                    </div>
+
+                    <div class="about__text reveal">
+                        <p class="about__description">
+                            I'm a <strong>Full Stack Developer</strong> specializing in <strong>AI & Machine
+                                Learning</strong>.
+                            Currently pursuing my B.E. in AI & Data Science at Dr. D.Y.
+                            Patil Institute of Technology, Pune.
+                        </p>
+
+                        <blockquote class="about__quote">
+                            "I build full-stack applications that can think."
+                        </blockquote>
+
+                        <p class="about__description">
+                            Passionate about creating end-to-end solutions that combine modern web technologies with
+                            intelligent ML capabilities. From building scalable backends to crafting intuitive
+                            frontends, I bring ideas to life.
+                        </p>
+
+                        <div class="about__stats">
+                            <div class="stat">
+                                <span class="stat__number">5+</span>
+                                <span class="stat__label">Projects</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">3+</span>
+                                <span class="stat__label">Technologies</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">5</span>
+                                <span class="stat__label">Certifications</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work/Projects Section -->
+        <section class="section work" id="work">
+            <div class="container">
+                <header class="section__header">
+                    <span class="section__number">02</span>
+                    <h2 class="section__title">Work</h2>
+                </header>
+
+                <!-- Featured Project -->
+                <article class="project project--featured reveal">
+                    <div class="project__image-wrapper">
+                        <img src="./images/projects/github-profile-roaster.png" alt="GitHub Profile Roaster"
+                            class="project__image">
+                    </div>
+                    <div class="project__content">
+                        <span class="project__label">Featured Project</span>
+                        <h3 class="project__title">GitHub Profile Roaster</h3>
+                        <p class="project__description">
+                            A fun web application that analyzes your GitHub profile and repositories to generate
+                            hilarious, AI-powered roasts at different intensity levels.
+                        </p>
+                        <div class="project__tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Gemini API</span>
+                        </div>
+                        <div class="project__links">
+                            <a href="https://github.com/ayushpatil0810/github-roaster" target="_blank" rel="noopener"
+                                class="project__link">
+                                View Code
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Other Projects -->
+                <div class="projects__grid">
+                    <h4 class="projects__subtitle">Other Projects</h4>
+
+                    <article class="project-item reveal">
+                        <div class="project-item__content">
+                            <h5 class="project-item__title">PDF Narrator</h5>
+                            <p class="project-item__description">Extracts text from PDF files and converts it to speech
+                                using Google Text-to-Speech.</p>
+                            <span class="project-item__tech">Python • gTTS • PyPDF2</span>
+                        </div>
+                        <a href="https://github.com/ayushpatil0810/pdf-narrator" target="_blank" rel="noopener"
+                            class="project-item__link" aria-label="View PDF Narrator">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-item reveal">
+                        <div class="project-item__content">
+                            <h5 class="project-item__title">Personal Portfolio</h5>
+                            <p class="project-item__description">A responsive personal portfolio website showcasing
+                                projects, skills, and professional experience.</p>
+                            <span class="project-item__tech">HTML5 • CSS3 • JavaScript</span>
+                        </div>
+                        <a href="https://github.com/ayushpatil0810/portfolio" target="_blank" rel="noopener"
+                            class="project-item__link" aria-label="View Personal Portfolio">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-item reveal">
+                        <div class="project-item__content">
+                            <h5 class="project-item__title">File Organizer Script</h5>
+                            <p class="project-item__description">Automatically organizes files in a specified folder
+                                into categorized subfolders.</p>
+                            <span class="project-item__tech">Python • Automation</span>
+                        </div>
+                        <a href="https://github.com/ayushpatil0810/file-organizer" target="_blank" rel="noopener"
+                            class="project-item__link" aria-label="View File Organizer">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="project-item reveal">
+                        <div class="project-item__content">
+                            <h5 class="project-item__title">Flask Blog</h5>
+                            <p class="project-item__description">A dynamic blog application built with Flask and Python.
+                            </p>
+                            <span class="project-item__tech">Flask • Python • SQLite</span>
+                        </div>
+                        <a href="https://github.com/ayushpatil0810/flask-blog" target="_blank" rel="noopener"
+                            class="project-item__link" aria-label="View Flask Blog">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <header class="section__header">
+                    <span class="section__number">03</span>
+                    <h2 class="section__title">Skills</h2>
+                </header>
+
+                <!-- Skills Marquee -->
+                <div class="marquee reveal">
+                    <div class="marquee__content">
+                        <span class="marquee__item">Python</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">JavaScript</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">React</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Node.js</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Express.js</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">MongoDB</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Flask</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Pandas</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">NumPy</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Git</span>
+                        <span class="marquee__separator">•</span>
+                    </div>
+                    <div class="marquee__content" aria-hidden="true">
+                        <span class="marquee__item">Python</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">JavaScript</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">React</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Node.js</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Express.js</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">MongoDB</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Flask</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Pandas</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">NumPy</span>
+                        <span class="marquee__separator">•</span>
+                        <span class="marquee__item">Git</span>
+                        <span class="marquee__separator">•</span>
+                    </div>
+                </div>
+
+                <!-- Skill Categories -->
+                <div class="skills__grid">
+                    <div class="skill-category reveal">
+                        <h4 class="skill-category__title">Languages</h4>
+                        <ul class="skill-category__list">
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>C / C++</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h4 class="skill-category__title">Frontend</h4>
+                        <ul class="skill-category__list">
+                            <li>React</li>
+                            <li>HTML & CSS</li>
+                            <li>Bootstrap</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h4 class="skill-category__title">Backend</h4>
+                        <ul class="skill-category__list">
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h4 class="skill-category__title">AI & Data Science</h4>
+                        <ul class="skill-category__list">
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                            <li>Matplotlib</li>
+                            <li>Seaborn</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h4 class="skill-category__title">Databases</h4>
+                        <ul class="skill-category__list">
+                            <li>MongoDB</li>
+                            <li>SQLite</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category reveal">
+                        <h4 class="skill-category__title">Tools</h4>
+                        <ul class="skill-category__list">
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Linux</li>
+                            <li>Jupyter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <header class="section__header">
+                    <span class="section__number">04</span>
+                    <h2 class="section__title">Let's Talk</h2>
+                </header>
+
+                <div class="contact__content">
+                    <div class="contact__intro reveal">
+                        <p class="contact__tagline">
+                            Have a project in mind? Let's build something great together.
+                        </p>
+                    </div>
+
+                    <form class="contact__form reveal" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="6490e6ea-0dfe-4724-a59d-f6481996db25">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <input type="hidden" name="subject" value="New Contact from Portfolio">
+                        <input type="hidden" name="from_name" value="Portfolio Contact">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+
+                        <div class="form__group">
+                            <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
+                            <label for="name" class="form__label">Name</label>
+                        </div>
+
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
+                            <label for="email" class="form__label">Email</label>
+                        </div>
+
+                        <div class="form__group form__group--full">
+                            <textarea id="message" name="message" class="form__input form__textarea" placeholder=" "
+                                rows="5" required></textarea>
+                            <label for="message" class="form__label">Message</label>
+                        </div>
+
+                        <button type="submit" class="form__submit">
+                            Send Message
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <div class="contact__info reveal">
+                        <a href="mailto:ayushpatil0810@gmail.com" class="contact__link">
+                            ayushpatil0810@gmail.com
+                        </a>
+                        <div class="contact__socials">
+                            <a href="https://github.com/ayushpatil0810" target="_blank" rel="noopener">GitHub</a>
+                            <a href="https://linkedin.com/in/ayushpatil0810" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://x.com/ayushpatil0810" target="_blank" rel="noopener">X / Twitter</a>
+                            <a href="https://instagram.com/ayushpatil0810" target="_blank" rel="noopener">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">© 2025 Ayush Patil</p>
+                <p class="footer__note">Designed & Built with intention</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
